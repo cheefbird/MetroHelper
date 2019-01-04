@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D361456CCC1F68FCF4975025 /* Pods_MetroHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */; };
 		D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E2A7921DEF6FD009826FB /* AppDelegate.swift */; };
 		D56E2A7C21DEF6FD009826FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E2A7B21DEF6FD009826FB /* ViewController.swift */; };
 		D56E2A7F21DEF6FD009826FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A7D21DEF6FD009826FB /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E2A7621DEF6FD009826FB /* MetroHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E2A7921DEF6FD009826FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D56E2A7B21DEF6FD009826FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		D56E2A8021DEF6FF009826FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D56E2A8321DEF6FF009826FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D56E2A8521DEF6FF009826FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB7826033A46C38DC1D02F5 /* Pods-MetroHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroHelper.debug.xcconfig"; path = "Target Support Files/Pods-MetroHelper/Pods-MetroHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		F09E871BD6125752F646DBFF /* Pods-MetroHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroHelper.release.xcconfig"; path = "Target Support Files/Pods-MetroHelper/Pods-MetroHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D361456CCC1F68FCF4975025 /* Pods_MetroHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C66A0F9BF42C14AF086078A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		759C7143002902D465A221B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBB7826033A46C38DC1D02F5 /* Pods-MetroHelper.debug.xcconfig */,
+				F09E871BD6125752F646DBFF /* Pods-MetroHelper.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D56E2A6D21DEF6FD009826FB = {
 			isa = PBXGroup;
 			children = (
 				D56E2A7821DEF6FD009826FB /* MetroHelper */,
 				D56E2A7721DEF6FD009826FB /* Products */,
+				759C7143002902D465A221B0 /* Pods */,
+				5C66A0F9BF42C14AF086078A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D56E2A8821DEF6FF009826FB /* Build configuration list for PBXNativeTarget "MetroHelper" */;
 			buildPhases = (
+				7B25BF09C461AB4A946346BF /* [CP] Check Pods Manifest.lock */,
 				D56E2A7221DEF6FD009826FB /* Sources */,
 				D56E2A7321DEF6FD009826FB /* Frameworks */,
 				D56E2A7421DEF6FD009826FB /* Resources */,
+				9766B6EB10DE972C19D0D912 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B25BF09C461AB4A946346BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MetroHelper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9766B6EB10DE972C19D0D912 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MetroHelper/Pods-MetroHelper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MetroHelper/Pods-MetroHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D56E2A7221DEF6FD009826FB /* Sources */ = {
@@ -280,11 +356,13 @@
 		};
 		D56E2A8921DEF6FF009826FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB7826033A46C38DC1D02F5 /* Pods-MetroHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WA3KPNE52J;
 				INFOPLIST_FILE = MetroHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,17 +370,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.MetroHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D56E2A8A21DEF6FF009826FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F09E871BD6125752F646DBFF /* Pods-MetroHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WA3KPNE52J;
 				INFOPLIST_FILE = MetroHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.MetroHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

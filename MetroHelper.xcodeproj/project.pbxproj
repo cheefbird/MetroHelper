@@ -54,8 +54,30 @@
 				EBB7826033A46C38DC1D02F5 /* Pods-MetroHelper.debug.xcconfig */,
 				F09E871BD6125752F646DBFF /* Pods-MetroHelper.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D52BFF0F21DEFAA5006A7058 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D56E2A7D21DEF6FD009826FB /* Main.storyboard */,
+				D56E2A8221DEF6FF009826FB /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D52BFF1021DEFACB006A7058 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D52BFF1121DEFAE7006A7058 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D56E2A6D21DEF6FD009826FB = {
@@ -79,11 +101,12 @@
 		D56E2A7821DEF6FD009826FB /* MetroHelper */ = {
 			isa = PBXGroup;
 			children = (
+				D52BFF1121DEFAE7006A7058 /* Models */,
+				D52BFF1021DEFACB006A7058 /* Controllers */,
+				D52BFF0F21DEFAA5006A7058 /* Views */,
 				D56E2A7921DEF6FD009826FB /* AppDelegate.swift */,
 				D56E2A7B21DEF6FD009826FB /* ViewController.swift */,
-				D56E2A7D21DEF6FD009826FB /* Main.storyboard */,
 				D56E2A8021DEF6FF009826FB /* Assets.xcassets */,
-				D56E2A8221DEF6FF009826FB /* LaunchScreen.storyboard */,
 				D56E2A8521DEF6FF009826FB /* Info.plist */,
 			);
 			path = MetroHelper;

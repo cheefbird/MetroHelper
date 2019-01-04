@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D361456CCC1F68FCF4975025 /* Pods_MetroHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */; };
 		D52BFF1321DEFBAF006A7058 /* StopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52BFF1221DEFBAF006A7058 /* StopTableViewController.swift */; };
+		D52BFF1721DEFD48006A7058 /* StopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52BFF1621DEFD48006A7058 /* StopTableViewCell.swift */; };
 		D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E2A7921DEF6FD009826FB /* AppDelegate.swift */; };
 		D56E2A7F21DEF6FD009826FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A7D21DEF6FD009826FB /* Main.storyboard */; };
 		D56E2A8121DEF6FF009826FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A8021DEF6FF009826FB /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52BFF1221DEFBAF006A7058 /* StopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewController.swift; sourceTree = "<group>"; };
+		D52BFF1621DEFD48006A7058 /* StopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewCell.swift; sourceTree = "<group>"; };
 		D56E2A7621DEF6FD009826FB /* MetroHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E2A7921DEF6FD009826FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D56E2A7E21DEF6FD009826FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		D52BFF0F21DEFAA5006A7058 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D52BFF1521DEFD24006A7058 /* Cells */,
 				D56E2A7D21DEF6FD009826FB /* Main.storyboard */,
 				D56E2A8221DEF6FF009826FB /* LaunchScreen.storyboard */,
 			);
@@ -79,6 +82,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D52BFF1521DEFD24006A7058 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D52BFF1621DEFD48006A7058 /* StopTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D56E2A6D21DEF6FD009826FB = {
@@ -235,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */,
+				D52BFF1721DEFD48006A7058 /* StopTableViewCell.swift in Sources */,
 				D52BFF1321DEFBAF006A7058 /* StopTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D361456CCC1F68FCF4975025 /* Pods_MetroHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */; };
 		D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E2A7921DEF6FD009826FB /* AppDelegate.swift */; };
-		D56E2A7C21DEF6FD009826FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E2A7B21DEF6FD009826FB /* ViewController.swift */; };
 		D56E2A7F21DEF6FD009826FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A7D21DEF6FD009826FB /* Main.storyboard */; };
 		D56E2A8121DEF6FF009826FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A8021DEF6FF009826FB /* Assets.xcassets */; };
 		D56E2A8421DEF6FF009826FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A8221DEF6FF009826FB /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E2A7621DEF6FD009826FB /* MetroHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E2A7921DEF6FD009826FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D56E2A7B21DEF6FD009826FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D56E2A7E21DEF6FD009826FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D56E2A8021DEF6FF009826FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D56E2A8321DEF6FF009826FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,11 +99,10 @@
 		D56E2A7821DEF6FD009826FB /* MetroHelper */ = {
 			isa = PBXGroup;
 			children = (
+				D56E2A7921DEF6FD009826FB /* AppDelegate.swift */,
 				D52BFF1121DEFAE7006A7058 /* Models */,
 				D52BFF1021DEFACB006A7058 /* Controllers */,
 				D52BFF0F21DEFAA5006A7058 /* Views */,
-				D56E2A7921DEF6FD009826FB /* AppDelegate.swift */,
-				D56E2A7B21DEF6FD009826FB /* ViewController.swift */,
 				D56E2A8021DEF6FF009826FB /* Assets.xcassets */,
 				D56E2A8521DEF6FF009826FB /* Info.plist */,
 			);
@@ -234,7 +231,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D56E2A7C21DEF6FD009826FB /* ViewController.swift in Sources */,
 				D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

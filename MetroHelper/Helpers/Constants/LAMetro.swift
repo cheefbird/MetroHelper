@@ -32,6 +32,7 @@ struct LAMetro {
   }
   
   enum Stop {
+    
     case museumStation
     case unionStation(Line)
     case seventhMetro(Line)
@@ -98,4 +99,17 @@ struct LAMetro {
       }
     }
   }
+  
+  var allStops: [String] {
+    return [
+      Stop.museumStation.name,
+      Stop.unionStation(.gold).name,
+      Stop.seventhMetro(.gold).name,
+      Stop.culverCity.name,
+      Stop.palms.name
+    ]
+  }
 }
+
+
+

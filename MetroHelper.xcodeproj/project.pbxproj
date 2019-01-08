@@ -10,6 +10,8 @@
 		D361456CCC1F68FCF4975025 /* Pods_MetroHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */; };
 		D52BFF1321DEFBAF006A7058 /* StopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52BFF1221DEFBAF006A7058 /* StopTableViewController.swift */; };
 		D52BFF1721DEFD48006A7058 /* StopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52BFF1621DEFD48006A7058 /* StopTableViewCell.swift */; };
+		D54DCE5A21E4627700F5E0F1 /* UIView+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DCE5921E4627700F5E0F1 /* UIView+Designable.swift */; };
+		D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DCE5F21E4674600F5E0F1 /* UserData.swift */; };
 		D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E2A7921DEF6FD009826FB /* AppDelegate.swift */; };
 		D56E2A7F21DEF6FD009826FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A7D21DEF6FD009826FB /* Main.storyboard */; };
 		D56E2A8121DEF6FF009826FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A8021DEF6FF009826FB /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 		77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52BFF1221DEFBAF006A7058 /* StopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewController.swift; sourceTree = "<group>"; };
 		D52BFF1621DEFD48006A7058 /* StopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewCell.swift; sourceTree = "<group>"; };
+		D54DCE5921E4627700F5E0F1 /* UIView+Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
+		D54DCE5F21E4674600F5E0F1 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D56E2A7621DEF6FD009826FB /* MetroHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E2A7921DEF6FD009826FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D56E2A7E21DEF6FD009826FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,31 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		D54DCE5821E4624900F5E0F1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D54DCE5C21E4656800F5E0F1 /* Fixtures */,
+				D54DCE5B21E4655F00F5E0F1 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D54DCE5B21E4655F00F5E0F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D54DCE5921E4627700F5E0F1 /* UIView+Designable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D54DCE5C21E4656800F5E0F1 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				D54DCE5F21E4674600F5E0F1 /* UserData.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		D56E2A6D21DEF6FD009826FB = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +142,7 @@
 		D56E2A7821DEF6FD009826FB /* MetroHelper */ = {
 			isa = PBXGroup;
 			children = (
+				D54DCE5821E4624900F5E0F1 /* Helpers */,
 				D56E2A7921DEF6FD009826FB /* AppDelegate.swift */,
 				D52BFF1121DEFAE7006A7058 /* Models */,
 				D52BFF1021DEFACB006A7058 /* Controllers */,
@@ -245,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54DCE5A21E4627700F5E0F1 /* UIView+Designable.swift in Sources */,
 				D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */,
 				D52BFF1721DEFD48006A7058 /* StopTableViewCell.swift in Sources */,
+				D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */,
 				D52BFF1321DEFBAF006A7058 /* StopTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

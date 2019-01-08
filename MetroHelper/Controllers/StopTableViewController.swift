@@ -11,7 +11,7 @@ import UIKit
 class StopTableViewController: UITableViewController {
   
   // MARK: - Properties
-  let stops = UserData.favoriteStops
+  let stops = LAMetro.allStops
   
   override func viewDidLoad() {
     super.viewDidLoad()

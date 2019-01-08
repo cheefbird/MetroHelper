@@ -100,7 +100,7 @@ struct LAMetro {
     }
   }
   
-  var allStops: [String] {
+  static var allStops: [String] {
     return [
       Stop.museumStation.name,
       Stop.unionStation(.gold).name,

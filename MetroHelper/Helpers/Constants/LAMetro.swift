@@ -42,6 +42,19 @@ struct LAMetro {
         return "804_1_var0"
       }
     }
+    
+    var homeDirectionId: String {
+      switch self {
+      case .redPurple:
+        return "802_0_var0"
+        
+      case .expo:
+        return "806_0_var0"
+        
+      case .gold:
+        return "804_0_var0"
+      }
+    }
   }
   
   enum Stop {

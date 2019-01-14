@@ -19,6 +19,7 @@
 		D56E2A8421DEF6FF009826FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A8221DEF6FF009826FB /* LaunchScreen.storyboard */; };
 		D58CCADF21ED1D1E00F52A99 /* PredictionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCADE21ED1D1E00F52A99 /* PredictionTableViewCell.swift */; };
 		D58CCAE521ED23DC00F52A99 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAE421ED23DC00F52A99 /* Stop.swift */; };
+		D58CCAE721ED270400F52A99 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAE621ED270400F52A99 /* Prediction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D56E2A8521DEF6FF009826FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D58CCADE21ED1D1E00F52A99 /* PredictionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionTableViewCell.swift; sourceTree = "<group>"; };
 		D58CCAE421ED23DC00F52A99 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		D58CCAE621ED270400F52A99 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
 		EBB7826033A46C38DC1D02F5 /* Pods-MetroHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroHelper.debug.xcconfig"; path = "Target Support Files/Pods-MetroHelper/Pods-MetroHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		F09E871BD6125752F646DBFF /* Pods-MetroHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroHelper.release.xcconfig"; path = "Target Support Files/Pods-MetroHelper/Pods-MetroHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				D58CCAE421ED23DC00F52A99 /* Stop.swift */,
+				D58CCAE621ED270400F52A99 /* Prediction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				D54DCE5A21E4627700F5E0F1 /* UIView+Designable.swift in Sources */,
 				D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */,
+				D58CCAE721ED270400F52A99 /* Prediction.swift in Sources */,
 				D54DCE6321E46E6F00F5E0F1 /* LAMetro.swift in Sources */,
 				D58CCAE521ED23DC00F52A99 /* Stop.swift in Sources */,
 				D52BFF1721DEFD48006A7058 /* StopTableViewCell.swift in Sources */,

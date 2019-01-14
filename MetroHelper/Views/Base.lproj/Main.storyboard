@@ -75,22 +75,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="North" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2c-Ed-6Eb">
-                                            <rect key="frame" x="16" y="7.5" width="61" height="29"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2c-Ed-6Eb">
+                                            <rect key="frame" x="16" y="7.5" width="63" height="29"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="Z2c-Ed-6Eb" secondAttribute="height" multiplier="61:29" id="163-d3-zbt"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="63" id="8dA-K0-Vhs"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
                                             <color key="textColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_north" translatesAutoresizingMaskIntoConstraints="NO" id="wN1-Hd-lrb">
-                                            <rect key="frame" x="80" y="12" width="16" height="19.5"/>
-                                            <color key="tintColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="wN1-Hd-lrb" secondAttribute="height" multiplier="9:11" id="hZE-Vk-qGf"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUW-9y-25U">
                                             <rect key="frame" x="299" y="10" width="60" height="24"/>
                                             <constraints>
@@ -100,17 +93,30 @@
                                             <color key="textColor" red="0.89411764709999997" green="0.99215686270000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_home" translatesAutoresizingMaskIntoConstraints="NO" id="wN1-Hd-lrb">
+                                            <rect key="frame" x="83" y="4" width="29" height="29"/>
+                                            <color key="tintColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="wN1-Hd-lrb" secondAttribute="height" multiplier="1:1" id="dYS-u2-eWc"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="wN1-Hd-lrb" firstAttribute="leading" secondItem="Z2c-Ed-6Eb" secondAttribute="trailing" constant="3" id="0tr-YW-fpb"/>
                                         <constraint firstItem="Z2c-Ed-6Eb" firstAttribute="centerY" secondItem="YDh-HD-5AM" secondAttribute="centerY" id="9RO-NM-DfD"/>
-                                        <constraint firstItem="Z2c-Ed-6Eb" firstAttribute="centerY" secondItem="wN1-Hd-lrb" secondAttribute="centerY" id="EiW-nN-qdi"/>
+                                        <constraint firstItem="Z2c-Ed-6Eb" firstAttribute="height" secondItem="wN1-Hd-lrb" secondAttribute="height" id="PAB-j9-kNs"/>
                                         <constraint firstItem="Z2c-Ed-6Eb" firstAttribute="leading" secondItem="YDh-HD-5AM" secondAttribute="leading" constant="16" id="UeP-h9-Fsm"/>
                                         <constraint firstItem="uUW-9y-25U" firstAttribute="centerY" secondItem="YDh-HD-5AM" secondAttribute="centerY" id="cjn-Li-gOJ"/>
+                                        <constraint firstItem="wN1-Hd-lrb" firstAttribute="leading" secondItem="Z2c-Ed-6Eb" secondAttribute="trailing" constant="4" id="d4r-eA-Gea"/>
+                                        <constraint firstItem="wN1-Hd-lrb" firstAttribute="centerY" secondItem="YDh-HD-5AM" secondAttribute="centerY" constant="-3" id="mUh-Iu-PdH"/>
                                         <constraint firstAttribute="trailing" secondItem="uUW-9y-25U" secondAttribute="trailing" constant="16" id="nvv-Hd-K4R"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.3921568627" green="0.51372549020000002" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="directionImage" destination="wN1-Hd-lrb" id="u37-P6-V8c"/>
+                                    <outlet property="directionLabel" destination="Z2c-Ed-6Eb" id="nbS-WN-QUj"/>
+                                    <outlet property="etaLabel" destination="uUW-9y-25U" id="sUB-Bx-cSI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -152,6 +158,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_north" width="16" height="19"/>
+        <image name="icon_home" width="19" height="19"/>
     </resources>
 </document>

@@ -22,6 +22,7 @@
 		D58CCAE721ED270400F52A99 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAE621ED270400F52A99 /* Prediction.swift */; };
 		D58CCAEA21ED451800F52A99 /* PredictionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAE921ED451800F52A99 /* PredictionData.swift */; };
 		D58CCAEC21ED489500F52A99 /* PredictionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAEB21ED489500F52A99 /* PredictionTableViewController.swift */; };
+		D58CCAF021ED4D7D00F52A99 /* PredictionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAEF21ED4D7D00F52A99 /* PredictionRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D58CCAE621ED270400F52A99 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
 		D58CCAE921ED451800F52A99 /* PredictionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionData.swift; sourceTree = "<group>"; };
 		D58CCAEB21ED489500F52A99 /* PredictionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionTableViewController.swift; sourceTree = "<group>"; };
+		D58CCAEF21ED4D7D00F52A99 /* PredictionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionRouter.swift; sourceTree = "<group>"; };
 		EBB7826033A46C38DC1D02F5 /* Pods-MetroHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroHelper.debug.xcconfig"; path = "Target Support Files/Pods-MetroHelper/Pods-MetroHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		F09E871BD6125752F646DBFF /* Pods-MetroHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroHelper.release.xcconfig"; path = "Target Support Files/Pods-MetroHelper/Pods-MetroHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +170,7 @@
 		D56E2A7821DEF6FD009826FB /* MetroHelper */ = {
 			isa = PBXGroup;
 			children = (
+				D58CCAED21ED4C6B00F52A99 /* Services */,
 				D54DCE5821E4624900F5E0F1 /* Helpers */,
 				D56E2A7921DEF6FD009826FB /* AppDelegate.swift */,
 				D52BFF1121DEFAE7006A7058 /* Models */,
@@ -177,6 +180,14 @@
 				D56E2A8521DEF6FF009826FB /* Info.plist */,
 			);
 			path = MetroHelper;
+			sourceTree = "<group>";
+		};
+		D58CCAED21ED4C6B00F52A99 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D58CCAEF21ED4D7D00F52A99 /* PredictionRouter.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				D58CCAE521ED23DC00F52A99 /* Stop.swift in Sources */,
 				D58CCAEC21ED489500F52A99 /* PredictionTableViewController.swift in Sources */,
 				D52BFF1721DEFD48006A7058 /* StopTableViewCell.swift in Sources */,
+				D58CCAF021ED4D7D00F52A99 /* PredictionRouter.swift in Sources */,
 				D58CCADF21ED1D1E00F52A99 /* PredictionTableViewCell.swift in Sources */,
 				D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */,
 				D58CCAEA21ED451800F52A99 /* PredictionData.swift in Sources */,

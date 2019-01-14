@@ -154,7 +154,7 @@ struct LAMetro {
   /// - Parameter runId: Prediction runId property
   /// - Returns: Human readable direction; **Home** or **Work**.
   /// - Note: Returns **None** when runId is invalid.
-  func getDirection(from runId: String) -> String {
+  static func getDirection(from runId: String) -> String {
     switch runId {
     case "802_1_var0", "806_1_var1", "804_1_var0":
       return "Work"

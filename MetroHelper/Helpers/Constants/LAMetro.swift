@@ -8,8 +8,16 @@
 
 import Foundation
 
+/// Object containing all relevant Stop and Line data properties.
+
 struct LAMetro {
+  
+  // MARK: - Properties
+  
+  /// Agency constant. Always "lametro-rail".
   let agency = "lametro-rail"
+  
+  // MARK: - Line
   
   enum Line {
     
@@ -56,6 +64,8 @@ struct LAMetro {
       }
     }
   }
+  
+  // MARK: - Stop
   
   enum Stop {
     
@@ -126,6 +136,9 @@ struct LAMetro {
     }
   }
   
+  // MARK: - Helpers
+  
+  /// Returns an array of Strings containing displayName of all Stops.
   static var allStops: [String] {
     return [
       Stop.museumStation.name,
@@ -135,7 +148,22 @@ struct LAMetro {
       Stop.palms.name
     ]
   }
+  
+  /// Helper method that converts runId String to relevant direction of "Home" or "Work".
+  ///
+  /// - Parameter runId: Prediction runId property
+  /// - Returns: Human readable direction; **Home** or **Work**.
+  /// - Note: Returns **None** when runId is invalid.
+  func getDirection(from runId: String) -> String {
+    switch runId {
+    case "802_1_var0", "806_1_var1", "804_1_var0":
+      return "Work"
+      
+    case "802_0_var0", "806_0_var0", "804_0_var0":
+      return "Home"
+      
+    default:
+      return "None"
+    }
+  }
 }
-
-
-

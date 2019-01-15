@@ -83,4 +83,5 @@ enum PredictionRouterError: Error {
   case invalidStopId(id: Int, reason: String)
   case routingError(reason: String)
   case routeCreationError(reason: String)
+  case serializationError(reason: String)
 }

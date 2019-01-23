@@ -13,6 +13,7 @@ class PredictionTableViewController: UITableViewController {
   // MARK: - Properties
   
   let predictions = PredictionData().sampleData
+  var stop: Stop!
   
   // MARK: - Overrides
   

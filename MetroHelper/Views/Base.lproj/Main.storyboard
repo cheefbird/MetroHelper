@@ -39,7 +39,7 @@
                                 <color key="backgroundColor" red="0.89411764709999997" green="0.99215686270000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.3921568627" green="0.51372549020000002" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <segue destination="GvM-bM-Efw" kind="show" id="TtQ-SZ-7uA"/>
+                                    <segue destination="GvM-bM-Efw" kind="show" identifier="showPredictions" id="TtQ-SZ-7uA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

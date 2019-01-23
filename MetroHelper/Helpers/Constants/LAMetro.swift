@@ -67,7 +67,7 @@ struct LAMetro {
   
   // MARK: - Stop
   
-  enum Stop {
+  enum Station {
     
     case museumStation
     case unionStation(Line)
@@ -80,11 +80,29 @@ struct LAMetro {
       case .museumStation:
         return "Museum Station"
         
-      case .unionStation:
-        return "Union Station"
+      case .unionStation(let line):
+        switch line {
+        case .gold:
+          return "Union Station: Gold"
+          
+        case .redPurple:
+          return "Union Station: Red/Purple"
+          
+        default:
+          return "None"
+        }
         
-      case .seventhMetro:
-        return "7th Street/Metro Center"
+      case .seventhMetro(let line):
+        switch line {
+        case .redPurple:
+          return "7th/Metro Center: Red/Purple"
+          
+        case .expo:
+          return "7th/Metro Center: Expo"
+          
+        default:
+          return "None"
+        }
         
       case .culverCity:
         return "Culver City"
@@ -139,14 +157,38 @@ struct LAMetro {
   // MARK: - Helpers
   
   /// Returns an array of Strings containing displayName of all Stops.
-  static var allStops: [String] {
+  static var allStopNames: [String] {
     return [
-      Stop.museumStation.name,
-      Stop.unionStation(.gold).name,
-      Stop.seventhMetro(.gold).name,
-      Stop.culverCity.name,
-      Stop.palms.name
+      Station.museumStation.name,
+      Station.unionStation(.gold).name,
+      Station.seventhMetro(.gold).name,
+      Station.culverCity.name,
+      Station.palms.name
     ]
+  }
+  
+  static func allStops() -> [Stop] {
+    var stops = [Stop]()
+    
+    // Museum station stop
+    stops.append(Stop(displayName: Station.museumStation.name, id: Station.museumStation.id))
+    
+    // Union station stops
+    stops.append(Stop(displayName: Station.unionStation(.gold).name, id: Station.unionStation(.gold).id))
+    stops.append(Stop(displayName: Station.unionStation(.redPurple).name, id: Station.unionStation(.redPurple).id))
+    
+    // 7th/Metro station stops
+    stops.append(Stop(displayName: Station.seventhMetro(.redPurple).name, id: Station.seventhMetro(.redPurple).id))
+    stops.append(Stop(displayName: Station.seventhMetro(.expo).name, id: Station.seventhMetro(.expo).id))
+    
+    // Culver city station stops
+    stops.append(Stop(displayName: Station.culverCity.name, id: Station.culverCity.id))
+    
+    // Palms station stops
+    stops.append(Stop(displayName: Station.palms.name, id: Station.palms.id))
+    
+    return stops
+    
   }
   
   /// Helper method that converts runId String to relevant direction of "Home" or "Work".
@@ -166,4 +208,38 @@ struct LAMetro {
       return "None"
     }
   }
+  
+  static func getStopIds(forStation station: String) -> [Int] {
+    
+    var results = [Int]()
+    
+    switch station {
+    case "Museum Station":
+      results.append(Station.museumStation.id)
+      return results
+      
+    case "7th Street/Metro Center":
+      results.append(Station.seventhMetro(.redPurple).id)
+      results.append(Station.seventhMetro(.expo).id)
+      return results
+      
+    case "Culver City":
+      results.append(Station.culverCity.id)
+      return results
+      
+    case "Union Station":
+      results.append(Station.unionStation(.gold).id)
+      results.append(Station.unionStation(.redPurple).id)
+      return results
+      
+    case "Palms":
+      results.append(Station.palms.id)
+      return results
+      
+    default:
+      return results
+    }
+  }
 }
+
+

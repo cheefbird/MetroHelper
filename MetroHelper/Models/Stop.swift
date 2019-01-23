@@ -9,8 +9,6 @@
 import Foundation
 
 struct Stop {
-  let latitude: Double
-  let longitude: Double
-  let displayName: String
-  let id: Int
+  var displayName: String
+  var id: Int
 }

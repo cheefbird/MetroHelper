@@ -15,7 +15,7 @@ struct LAMetro {
   // MARK: - Properties
   
   /// Agency constant. Always "lametro-rail".
-  let agency = "lametro-rail"
+  static let agency = "lametro-rail"
   
   // MARK: - Line
   
@@ -186,6 +186,8 @@ struct LAMetro {
     
     // Palms station stops
     stops.append(Stop(displayName: Station.palms.name, id: Station.palms.id))
+    
+    print(stops)
     
     return stops
     

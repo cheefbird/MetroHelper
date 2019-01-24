@@ -36,7 +36,7 @@ class PredictionTableViewCell: UITableViewCell {
     
     let image = getDirectionImage(fromDirection: direction)
     
-    let eta = createEtaLabel(withTime: prediction.minutes)
+    let eta = createEtaLabelText(withTime: prediction.minutes)
     
     directionLabel.text = direction
     directionImage.image = image
@@ -61,7 +61,7 @@ class PredictionTableViewCell: UITableViewCell {
     return image
   }
   
-  private func createEtaLabel(withTime time: Int) -> String {
+  private func createEtaLabelText(withTime time: Int) -> String {
     return "\(time)min"
   }
 }

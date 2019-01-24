@@ -12,14 +12,20 @@ class PredictionTableViewController: UITableViewController {
   
   // MARK: - Properties
   
-  let predictions = PredictionData().sampleData
+  let samplePredictions = PredictionData().sampleData
   var stop: Stop!
+  var predictions = [Prediction]()
   
   // MARK: - Overrides
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.title = stop.displayName
+    
+    print(stop.id)
+    
+    fetchPredictions()
   }
   
   // MARK: - Data Source
@@ -53,5 +59,28 @@ class PredictionTableViewController: UITableViewController {
    // Pass the selected object to the new view controller.
    }
    */
+  
+  // MARK: - Data Methods
+  
+  func fetchPredictions() {
+    
+    PredictionService.sharedInstance.getPredictions(forStop: stop.id) {
+      result in
+      
+      guard result.error == nil else {
+        // TODO: Show error in alert modal
+        print(result.error.debugDescription)
+        return
+      }
+      
+      if let fetchedPredictions = result.value {
+        self.predictions = fetchedPredictions
+        print("PREDICTIONS:")
+        print(fetchedPredictions)
+      }
+      
+      self.tableView.reloadData()
+    }
+  }
   
 }

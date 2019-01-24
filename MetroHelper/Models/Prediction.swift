@@ -23,13 +23,14 @@ struct Prediction {
   }
   
   init?(json: JSON) {
-    guard let routeId = json["route_id"].int else {
+    
+    if json["route_id"].intValue < 1 {
       return nil
     }
     
     self.seconds = json["seconds"].intValue
     self.minutes = json["minutes"].intValue
-    self.routeId = routeId
+    self.routeId = json["route_id"].intValue
     self.runId = json["run_id"].stringValue
   }
 }

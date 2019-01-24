@@ -200,10 +200,10 @@ struct LAMetro {
   /// - Note: Returns **None** when runId is invalid.
   static func getDirection(from runId: String) -> String {
     switch runId {
-    case "802_1_var0", "806_1_var1", "804_1_var0":
+    case "802_1_var0", "802_1_var1", "806_1_var1", "806_1_var0", "804_1_var0", "804_1_var1":
       return "Work"
       
-    case "802_0_var0", "806_0_var0", "804_0_var0":
+    case "802_0_var0", "802_0_var1", "806_0_var0", "806_0_var1", "804_0_var0", "804_0_var1":
       return "Home"
       
     default:

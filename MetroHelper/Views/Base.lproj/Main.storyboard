@@ -13,7 +13,7 @@
             <objects>
                 <tableViewController id="Unb-h1-ZfN" customClass="StopTableViewController" customModule="MetroHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SBg-1g-h77">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="410"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89411764709999997" green="0.99215686270000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="separatorColor" red="1" green="0.77973909419999998" blue="0.27163963749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -60,8 +60,8 @@
         <scene sceneID="hh3-ll-0DY">
             <objects>
                 <tableViewController id="GvM-bM-Efw" customClass="PredictionTableViewController" customModule="MetroHelper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BRI-EK-Zmy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="410"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BRI-EK-Zmy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.3921568627" green="0.51372549020000002" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="separatorColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -126,6 +126,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="HUm-8u-DBU"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="f20-he-Grq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.3411764706" green="0.3411764706" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXw-Ju-iYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

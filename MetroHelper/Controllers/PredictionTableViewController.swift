@@ -26,6 +26,8 @@ class PredictionTableViewController: UITableViewController {
     print(stop.id)
     
     fetchPredictions()
+    
+    self.refreshControl?.addTarget(self, action: #selector(fetchPredictions), for: .valueChanged)
   }
   
   // MARK: - Data Source
@@ -62,7 +64,7 @@ class PredictionTableViewController: UITableViewController {
   
   // MARK: - Data Methods
   
-  func fetchPredictions() {
+  @objc func fetchPredictions() {
     
     PredictionService.sharedInstance.getPredictions(forStop: stop.id) {
       result in
@@ -80,6 +82,7 @@ class PredictionTableViewController: UITableViewController {
       }
       
       self.tableView.reloadData()
+      self.refreshControl?.endRefreshing()
     }
   }
   

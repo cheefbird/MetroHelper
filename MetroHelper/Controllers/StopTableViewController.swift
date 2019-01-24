@@ -48,6 +48,10 @@ class StopTableViewController: UITableViewController {
     return cell
   }
   
+  // MARK: - Methods
+  
+  // TODO: Pass StopID to PredictionTableVC for its fetch method
+  
   
   /*
    // Override to support conditional editing of the table view.

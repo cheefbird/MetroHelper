@@ -20,7 +20,7 @@ enum PredictionRouter: URLRequestConvertible {
   var baseUrl: String {
     switch self {
     case .getPredictions:
-      return "http://api.metro.net/"
+      return "https://api.metro.net/"
     }
   }
   
@@ -32,7 +32,7 @@ enum PredictionRouter: URLRequestConvertible {
     
     switch self {
     case .getPredictions(let stopId):
-      return "agencies/\(LAMetro().agency)/stops/\(stopId)/predictions/"
+      return "agencies/\(LAMetro.agency)/stops/\(stopId)/predictions/"
     }
   }
   
@@ -67,7 +67,7 @@ enum PredictionRouter: URLRequestConvertible {
     
     let encoding = URLEncoding.default
     
-    return try encoding.encode(request, with: parameters)
+    return try encoding.encode(request, with: nil)
   }
   
   
@@ -83,4 +83,5 @@ enum PredictionRouterError: Error {
   case invalidStopId(id: Int, reason: String)
   case routingError(reason: String)
   case routeCreationError(reason: String)
+  case serializationError(reason: String)
 }

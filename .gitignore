@@ -2,7 +2,7 @@
 # Created by https://www.gitignore.io/api/xcode,swift,macos,cocoapods,objective-c
 # Edit at https://www.gitignore.io/?templates=xcode,swift,macos,cocoapods,objective-c
 
-## Bitrise CodeSign Exports
+## Bitrise CodeSign Exports 
 codesigndoc_exports/
 
 ### CocoaPods ###

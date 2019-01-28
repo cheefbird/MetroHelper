@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +14,7 @@
             <objects>
                 <tableViewController id="Unb-h1-ZfN" customClass="StopTableViewController" customModule="MetroHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SBg-1g-h77">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="410"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89411764709999997" green="0.99215686270000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="separatorColor" red="1" green="0.77973909419999998" blue="0.27163963749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -117,6 +118,7 @@
                                     <outlet property="directionImage" destination="wN1-Hd-lrb" id="u37-P6-V8c"/>
                                     <outlet property="directionLabel" destination="Z2c-Ed-6Eb" id="nbS-WN-QUj"/>
                                     <outlet property="etaLabel" destination="uUW-9y-25U" id="sUB-Bx-cSI"/>
+                                    <segue destination="7eA-XB-J0h" kind="show" id="kdC-wm-bZ6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -127,6 +129,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="HUm-8u-DBU"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="f20-he-Grq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.3411764706" green="0.3411764706" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -135,6 +138,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXw-Ju-iYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1916" y="22.938530734632685"/>
+        </scene>
+        <!--Vehicle Location View Controller-->
+        <scene sceneID="7Yf-y7-KaW">
+            <objects>
+                <viewController id="7eA-XB-J0h" customClass="VehicleLocationViewController" customModule="MetroHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cPi-lQ-Gi5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="410"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8no-5P-FIG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7eA-XB-J0h" id="OPk-ke-QVb"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8no-5P-FIG" firstAttribute="top" secondItem="qaa-mg-bZO" secondAttribute="top" id="FfI-sm-I1W"/>
+                            <constraint firstItem="qaa-mg-bZO" firstAttribute="trailing" secondItem="8no-5P-FIG" secondAttribute="trailing" id="MQI-vb-fwC"/>
+                            <constraint firstItem="8no-5P-FIG" firstAttribute="leading" secondItem="qaa-mg-bZO" secondAttribute="leading" id="m9M-4F-Tao"/>
+                            <constraint firstItem="qaa-mg-bZO" firstAttribute="bottom" secondItem="8no-5P-FIG" secondAttribute="bottom" id="sDy-z0-O6i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qaa-mg-bZO"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="8no-5P-FIG" id="aTA-PV-hPr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSq-GR-uqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2987" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ko0-Q6-QkZ">

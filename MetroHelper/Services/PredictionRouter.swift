@@ -14,14 +14,12 @@ enum PredictionRouter: URLRequestConvertible {
   // MARK: - Routes
   
   case getPredictions(Int)
+  case getTrainInformation(Int)
   
   // MARK: - URL Components
   
   var baseUrl: String {
-    switch self {
-    case .getPredictions:
-      return "https://api.metro.net/"
-    }
+    return "https://api.metro.net/"
   }
   
   var method: HTTPMethod {
@@ -33,6 +31,9 @@ enum PredictionRouter: URLRequestConvertible {
     switch self {
     case .getPredictions(let stopId):
       return "agencies/\(LAMetro.agency)/stops/\(stopId)/predictions/"
+      
+    case .getTrainInformation(let trainId):
+      return "/agencies/\(LAMetro.agency)/vehicles/\(trainId)/"
     }
   }
   

@@ -14,7 +14,7 @@ enum PredictionRouter: URLRequestConvertible {
   // MARK: - Routes
   
   case getPredictions(Int)
-  case getTrainInformation(Int)
+  case getVehicleInfo(Int)
   
   // MARK: - URL Components
   
@@ -32,7 +32,7 @@ enum PredictionRouter: URLRequestConvertible {
     case .getPredictions(let stopId):
       return "agencies/\(LAMetro.agency)/stops/\(stopId)/predictions/"
       
-    case .getTrainInformation(let trainId):
+    case .getVehicleInfo(let trainId):
       return "/agencies/\(LAMetro.agency)/vehicles/\(trainId)/"
     }
   }

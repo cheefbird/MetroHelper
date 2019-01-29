@@ -13,8 +13,8 @@ class VehicleLocation: NSObject, MKAnnotation {
   var coordinate: CLLocationCoordinate2D
   let title: String?
   
-  init(coordinate: CLLocationCoordinate2D, title: String) {
-    self.coordinate = coordinate
+  init(vehicle: Vehicle, title: String) {
+    self.coordinate = vehicle.getCoordinate()
     self.title = title
     
     super.init()

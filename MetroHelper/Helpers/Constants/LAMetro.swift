@@ -199,13 +199,19 @@ struct LAMetro {
   /// - Returns: Human readable direction; **Home** or **Work**.
   /// - Note: Returns **None** when runId is invalid.
   static func getDirection(from runId: String) -> String {
-    switch runId {
-    case "802_1_var0", "802_1_var1", "806_1_var1", "806_1_var0", "804_1_var0", "804_1_var1":
+    
+    guard let referenceIndex = runId.firstIndex(of: "_") else {
+      return "None"
+    }
+    
+    let targetIndex = runId.index(after: referenceIndex)
+    let directionCharacter = runId[targetIndex]
+    
+    switch directionCharacter {
+    case "1":
       return "Work"
-      
-    case "802_0_var0", "802_0_var1", "806_0_var0", "806_0_var1", "804_0_var0", "804_0_var1":
+    case "0":
       return "Home"
-      
     default:
       return "None"
     }

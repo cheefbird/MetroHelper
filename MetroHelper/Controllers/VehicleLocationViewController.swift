@@ -15,8 +15,10 @@ class VehicleLocationViewController: UIViewController {
   @IBOutlet weak var mapView: MKMapView!
   
   // MARK: - Properties
-  let testLocation = CLLocationCoordinate2D(latitude: 34.0263909, longitude: -118.372572)
+  let initialLocation = CLLocationCoordinate2D(latitude: 34.0263909, longitude: -118.372572)
   
+  var trainId: Int!
+  var vehicleLocation: VehicleLocation!
   let locationManager = CLLocationManager()
   
   // MARK: - Overrides
@@ -24,17 +26,35 @@ class VehicleLocationViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    centerMap(onLocation: testLocation)
+    mapView.isRotateEnabled = false
     
-    let vehicleLocation = VehicleLocation(coordinate: testLocation, title: "Test Vehicle Location")
-    mapView.addAnnotation(vehicleLocation)
+    centerMap(onLocation: initialLocation)
     
-    // Do any additional setup after loading the view.
+    fetchVehicleLocation()
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     checkLocationPermissionStatus()
+  }
+  
+  // MARK: - Data Methods
+  
+  private func fetchVehicleLocation() {
+    PredictionService.sharedInstance.getTrainLocation(forTrainId: trainId) { result in
+      guard result.error == nil else {
+        // TODO: Show error in alert modal
+        print(result.error.debugDescription)
+        return
+      }
+      
+      if let newLocation = result.value {
+        self.vehicleLocation = newLocation
+        
+        self.mapView.addAnnotation(newLocation)
+        self.centerMap(onLocation: newLocation.coordinate)
+      }
+    }
   }
   
   

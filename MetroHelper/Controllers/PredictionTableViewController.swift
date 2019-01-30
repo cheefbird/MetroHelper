@@ -12,7 +12,6 @@ class PredictionTableViewController: UITableViewController {
   
   // MARK: - Properties
   
-  let samplePredictions = PredictionData().sampleData
   var stop: Stop!
   var predictions = [Prediction]()
   
@@ -52,15 +51,14 @@ class PredictionTableViewController: UITableViewController {
     return cell
   }
   
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destination.
-   // Pass the selected object to the new view controller.
-   }
-   */
+  // MARK: - Navigation
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let nextVC = segue.destination as! VehicleLocationViewController
+    if let indexPath = tableView.indexPathForSelectedRow {
+      nextVC.trainId = predictions[indexPath.row].trainId
+    }
+  }
   
   // MARK: - Data Methods
   

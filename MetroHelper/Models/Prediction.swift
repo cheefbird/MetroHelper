@@ -14,12 +14,14 @@ struct Prediction {
   var minutes: Int
   let routeId: Int
   let runId: String
+  let trainId: Int
   
-  init(seconds: Int, minutes: Int, routeId: Int, runId: String) {
+  init(seconds: Int, minutes: Int, routeId: Int, runId: String, trainId: Int) {
     self.seconds = seconds
     self.minutes = minutes
     self.routeId = routeId
     self.runId = runId
+    self.trainId = trainId
   }
   
   init?(json: JSON) {
@@ -32,5 +34,6 @@ struct Prediction {
     self.minutes = json["minutes"].intValue
     self.routeId = json["route_id"].intValue
     self.runId = json["run_id"].stringValue
+    self.trainId = json["block_id"].intValue
   }
 }

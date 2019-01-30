@@ -15,6 +15,7 @@ struct Prediction {
   let routeId: Int
   let runId: String
   let trainId: Int
+  let direction: String
   
   init(seconds: Int, minutes: Int, routeId: Int, runId: String, trainId: Int) {
     self.seconds = seconds
@@ -22,6 +23,7 @@ struct Prediction {
     self.routeId = routeId
     self.runId = runId
     self.trainId = trainId
+    self.direction = LAMetro.getDirection(forRunID: runId)
   }
   
   init?(json: JSON) {
@@ -35,5 +37,6 @@ struct Prediction {
     self.routeId = json["route_id"].intValue
     self.runId = json["run_id"].stringValue
     self.trainId = json["block_id"].intValue
+    self.direction = LAMetro.getDirection(forRunID: self.runId)
   }
 }

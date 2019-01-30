@@ -198,7 +198,7 @@ struct LAMetro {
   /// - Parameter runId: Prediction runId property
   /// - Returns: Human readable direction; **Home** or **Work**.
   /// - Note: Returns **None** when runId is invalid.
-  static func getDirection(from runId: String) -> String {
+  static func getDirection(forRunID runId: String) -> String {
     
     guard let referenceIndex = runId.firstIndex(of: "_") else {
       return "None"

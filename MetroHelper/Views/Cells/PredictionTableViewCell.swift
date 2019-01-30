@@ -32,13 +32,12 @@ class PredictionTableViewCell: UITableViewCell {
   // MARK: - Methods
   
   func configure(withPrediction prediction: Prediction) {
-    let direction = LAMetro.getDirection(from: prediction.runId)
     
-    let image = getDirectionImage(fromDirection: direction)
+    let image = getDirectionImage(fromDirection: prediction.direction)
     
     let eta = createEtaLabelText(withTime: prediction.minutes)
     
-    directionLabel.text = direction
+    directionLabel.text = prediction.direction
     directionImage.image = image
     etaLabel.text = eta
   }

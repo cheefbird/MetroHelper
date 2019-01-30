@@ -60,16 +60,16 @@ class PredictionService {
     return .success(predictions)
   }
   
-  func getTrainInformation(forTrainId trainId: Int, completionHandler: @escaping (Result<Vehicle>) -> Void) {
+  func getTrainLocation(forTrainId trainId: Int, completionHandler: @escaping (Result<VehicleLocation>) -> Void) {
     Alamofire.request(PredictionRouter.getVehicleInfo(trainId))
       .responseJSON { response in
-        let vehicle = self.createVehicle(fromResponse: response, withTrainID: trainId)
+        let vehicle = self.createVehicleLocation(fromResponse: response, withTrainID: trainId)
         
         completionHandler(vehicle)
     }
   }
   
-  private func createVehicle(fromResponse response: DataResponse<Any>, withTrainID trainId: Int) -> Result<Vehicle> {
+  private func createVehicleLocation(fromResponse response: DataResponse<Any>, withTrainID trainId: Int) -> Result<VehicleLocation> {
     guard response.result.error == nil else {
       print(response.result.error!)
       return .failure(PredictionRouterError.routingError(reason: "Network error: \(response.result.error!)"))
@@ -82,7 +82,9 @@ class PredictionService {
     let json = JSON(rawJson)
     
     if let vehicle = Vehicle(withJson: json, forTrainID: trainId) {
-      return .success(vehicle)
+      let title = "Vehicle \(vehicle.routeId) Location"
+      let vehicleLocation = VehicleLocation(vehicle: vehicle, title: title)
+      return .success(vehicleLocation)
     } else {
       return .failure(PredictionRouterError.serializationError(reason: "Could not turn JSON into a Vehicle"))
     }

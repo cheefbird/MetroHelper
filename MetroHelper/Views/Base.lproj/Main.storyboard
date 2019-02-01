@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="940" y="22.938530734632685"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Stop View Controller-->
         <scene sceneID="vdj-eB-cKJ">
             <objects>
-                <viewController id="cth-dr-r1c" sceneMemberID="viewController">
+                <viewController id="cth-dr-r1c" customClass="AddStopViewController" customModule="MetroHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zf3-0L-oCs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,6 +74,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnI-B0-Hc7">
                                 <rect key="frame" x="354" y="32" width="40" height="40"/>
                                 <state key="normal" image="icon_close_large"/>
+                                <connections>
+                                    <action selector="dismissSearchView" destination="cth-dr-r1c" eventType="touchUpInside" id="Rvc-Nc-Ffi"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for a Metro Stop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Wpr-wT-edE">
                                 <rect key="frame" x="56" y="93" width="302.33333333333331" height="36"/>
@@ -122,6 +125,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Afc-ka-Bph"/>
                     </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="HST-0g-rf0" id="MRy-ig-zFj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zux-Wp-z78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

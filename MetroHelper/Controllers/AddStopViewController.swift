@@ -13,6 +13,7 @@ class AddStopViewController: UIViewController {
   
   // MARK: - Properties
   
+  let allLines = LAMetro.getAllLines()
   
   
   // MARK: - Outlets
@@ -24,7 +25,13 @@ class AddStopViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    lineSelectField.optionArray = ["804", "806", "801"]
+    var lineNames = [String]()
+    
+    for line in allLines {
+      lineNames.append(line.displayName)
+    }
+    
+    lineSelectField.optionArray = lineNames
   }
   
   // MARK: - IBActions

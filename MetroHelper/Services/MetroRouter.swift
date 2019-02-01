@@ -15,6 +15,7 @@ enum MetroRouter: URLRequestConvertible {
   
   case getPredictions(Int)
   case getVehicleInfo(Int)
+  case getStops(Int)
   
   // MARK: - URL Components
   
@@ -34,6 +35,9 @@ enum MetroRouter: URLRequestConvertible {
       
     case .getVehicleInfo(let trainId):
       return "/agencies/\(LAMetro.agency)/vehicles/\(trainId)/"
+      
+    case .getStops(let routeId):
+      return "/agencies/\(LAMetro.agency)/routes/\(routeId)/stops/"
     }
   }
   

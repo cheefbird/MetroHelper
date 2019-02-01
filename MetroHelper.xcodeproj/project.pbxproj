@@ -24,8 +24,8 @@
 		D58CCAE721ED270400F52A99 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAE621ED270400F52A99 /* Prediction.swift */; };
 		D58CCAEA21ED451800F52A99 /* PredictionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAE921ED451800F52A99 /* PredictionData.swift */; };
 		D58CCAEC21ED489500F52A99 /* PredictionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAEB21ED489500F52A99 /* PredictionTableViewController.swift */; };
-		D58CCAF021ED4D7D00F52A99 /* PredictionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAEF21ED4D7D00F52A99 /* PredictionRouter.swift */; };
-		D58CCAF221ED55B100F52A99 /* PredictionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAF121ED55B100F52A99 /* PredictionService.swift */; };
+		D58CCAF021ED4D7D00F52A99 /* MetroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAEF21ED4D7D00F52A99 /* MetroRouter.swift */; };
+		D58CCAF221ED55B100F52A99 /* MetroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAF121ED55B100F52A99 /* MetroService.swift */; };
 		D59502BE21FA7F6A0036C06B /* VehicleLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59502BD21FA7F6A0036C06B /* VehicleLocationViewController.swift */; };
 		D59502C421FA8B7C0036C06B /* VehicleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59502C321FA8B7C0036C06B /* VehicleLocation.swift */; };
 		D5AB89E92203DDDC00CB14DB /* AddStopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AB89E82203DDDC00CB14DB /* AddStopViewController.swift */; };
@@ -52,8 +52,8 @@
 		D58CCAE621ED270400F52A99 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
 		D58CCAE921ED451800F52A99 /* PredictionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionData.swift; sourceTree = "<group>"; };
 		D58CCAEB21ED489500F52A99 /* PredictionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionTableViewController.swift; sourceTree = "<group>"; };
-		D58CCAEF21ED4D7D00F52A99 /* PredictionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionRouter.swift; sourceTree = "<group>"; };
-		D58CCAF121ED55B100F52A99 /* PredictionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionService.swift; sourceTree = "<group>"; };
+		D58CCAEF21ED4D7D00F52A99 /* MetroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroRouter.swift; sourceTree = "<group>"; };
+		D58CCAF121ED55B100F52A99 /* MetroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroService.swift; sourceTree = "<group>"; };
 		D59502BD21FA7F6A0036C06B /* VehicleLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocationViewController.swift; sourceTree = "<group>"; };
 		D59502C321FA8B7C0036C06B /* VehicleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocation.swift; sourceTree = "<group>"; };
 		D5AB89E82203DDDC00CB14DB /* AddStopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStopViewController.swift; sourceTree = "<group>"; };
@@ -204,8 +204,8 @@
 		D58CCAED21ED4C6B00F52A99 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D58CCAEF21ED4D7D00F52A99 /* PredictionRouter.swift */,
-				D58CCAF121ED55B100F52A99 /* PredictionService.swift */,
+				D58CCAEF21ED4D7D00F52A99 /* MetroRouter.swift */,
+				D58CCAF121ED55B100F52A99 /* MetroService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -349,11 +349,11 @@
 				D59502C421FA8B7C0036C06B /* VehicleLocation.swift in Sources */,
 				D537CB4D21FFD93B003FFB0E /* Vehicle.swift in Sources */,
 				D52BFF1721DEFD48006A7058 /* StopTableViewCell.swift in Sources */,
-				D58CCAF021ED4D7D00F52A99 /* PredictionRouter.swift in Sources */,
+				D58CCAF021ED4D7D00F52A99 /* MetroRouter.swift in Sources */,
 				D58CCADF21ED1D1E00F52A99 /* PredictionTableViewCell.swift in Sources */,
 				D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */,
 				D58CCAEA21ED451800F52A99 /* PredictionData.swift in Sources */,
-				D58CCAF221ED55B100F52A99 /* PredictionService.swift in Sources */,
+				D58CCAF221ED55B100F52A99 /* MetroService.swift in Sources */,
 				D529EB4E2203EBF600015675 /* TrainLine.swift in Sources */,
 				D54EFEDD2203E7D4004A9D9F /* UIButton+CustomButton.swift in Sources */,
 				D52BFF1321DEFBAF006A7058 /* StopTableViewController.swift in Sources */,

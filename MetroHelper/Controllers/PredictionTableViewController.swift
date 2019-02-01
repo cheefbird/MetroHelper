@@ -93,7 +93,7 @@ class PredictionTableViewController: UITableViewController {
     homePredictions.removeAll()
     workPredictions.removeAll()
     
-    PredictionService.sharedInstance.getPredictions(forStop: stop.id) {
+    MetroService.sharedInstance.getPredictions(forStop: stop.id) {
       result in
       
       guard result.error == nil else {

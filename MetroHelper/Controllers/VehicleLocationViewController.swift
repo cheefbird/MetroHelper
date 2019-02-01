@@ -41,7 +41,7 @@ class VehicleLocationViewController: UIViewController {
   // MARK: - Data Methods
   
   private func fetchVehicleLocation() {
-    PredictionService.sharedInstance.getTrainLocation(forTrainId: trainId) { result in
+    MetroService.sharedInstance.getTrainLocation(forTrainId: trainId) { result in
       guard result.error == nil else {
         // TODO: Show error in alert modal
         print(result.error.debugDescription)

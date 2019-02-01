@@ -10,11 +10,11 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class PredictionService {
+class MetroService {
   
   // MARK: - Properties
   
-  static let sharedInstance = PredictionService()
+  static let sharedInstance = MetroService()
   
   // MARK: - Init
   
@@ -23,7 +23,7 @@ class PredictionService {
   // MARK: - GET Predictions
   
   func getPredictions(forStop stopId: Int, completionHandler: @escaping (Result<[Prediction]>) -> Void) {
-    Alamofire.request(PredictionRouter.getPredictions(stopId))
+    Alamofire.request(MetroRouter.getPredictions(stopId))
       .responseJSON { response in
         let result = self.buildPredictionsArray(response: response)
         
@@ -61,7 +61,7 @@ class PredictionService {
   }
   
   func getTrainLocation(forTrainId trainId: Int, completionHandler: @escaping (Result<VehicleLocation>) -> Void) {
-    Alamofire.request(PredictionRouter.getVehicleInfo(trainId))
+    Alamofire.request(MetroRouter.getVehicleInfo(trainId))
       .responseJSON { response in
         let vehicle = self.createVehicleLocation(fromResponse: response, withTrainID: trainId)
         

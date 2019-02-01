@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-enum PredictionRouter: URLRequestConvertible {
+enum MetroRouter: URLRequestConvertible {
   
   // MARK: - Routes
   

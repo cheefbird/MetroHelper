@@ -14,7 +14,7 @@ class AddStopViewController: UIViewController {
   // MARK: - Properties
   
   let allLines = LAMetro.getAllLines()
-  
+  var availableStops = [Stop]()
   
   // MARK: - Outlets
   

@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import iOSDropDown
 
 class AddStopViewController: UIViewController {
   
+  // MARK: - Properties
+  
+  
+  
   // MARK: - Outlets
   
-  @IBOutlet weak var searchTextField: UITextField!
+  @IBOutlet weak var lineSelectField: DropDown!
   
   // MARK: - Overrides
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Do any additional setup after loading the view.
+    lineSelectField.optionArray = ["804", "806", "801"]
   }
   
   // MARK: - IBActions

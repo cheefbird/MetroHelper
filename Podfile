@@ -8,5 +8,6 @@ target 'MetroHelper' do
   # Pods for MetroHelper
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'iOSDropDown'
 
 end

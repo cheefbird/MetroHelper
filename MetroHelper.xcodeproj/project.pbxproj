@@ -15,6 +15,7 @@
 		D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DCE5F21E4674600F5E0F1 /* UserData.swift */; };
 		D54DCE6321E46E6F00F5E0F1 /* LAMetro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DCE6221E46E6F00F5E0F1 /* LAMetro.swift */; };
 		D54EFEDB2203E426004A9D9F /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EFEDA2203E426004A9D9F /* iOSDropDown.framework */; };
+		D54EFEDD2203E7D4004A9D9F /* UIButton+CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54EFEDC2203E7D4004A9D9F /* UIButton+CustomButton.swift */; };
 		D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E2A7921DEF6FD009826FB /* AppDelegate.swift */; };
 		D56E2A7F21DEF6FD009826FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A7D21DEF6FD009826FB /* Main.storyboard */; };
 		D56E2A8121DEF6FF009826FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A8021DEF6FF009826FB /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		D54DCE5F21E4674600F5E0F1 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D54DCE6221E46E6F00F5E0F1 /* LAMetro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAMetro.swift; sourceTree = "<group>"; };
 		D54EFEDA2203E426004A9D9F /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D54EFEDC2203E7D4004A9D9F /* UIButton+CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+CustomButton.swift"; sourceTree = "<group>"; };
 		D56E2A7621DEF6FD009826FB /* MetroHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E2A7921DEF6FD009826FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D56E2A7E21DEF6FD009826FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D54DCE5921E4627700F5E0F1 /* UIView+Designable.swift */,
+				D54EFEDC2203E7D4004A9D9F /* UIButton+CustomButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */,
 				D58CCAEA21ED451800F52A99 /* PredictionData.swift in Sources */,
 				D58CCAF221ED55B100F52A99 /* PredictionService.swift in Sources */,
+				D54EFEDD2203E7D4004A9D9F /* UIButton+CustomButton.swift in Sources */,
 				D52BFF1321DEFBAF006A7058 /* StopTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

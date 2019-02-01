@@ -19,6 +19,7 @@ class AddStopViewController: UIViewController {
   // MARK: - Outlets
   
   @IBOutlet weak var lineSelectField: DropDown!
+  @IBOutlet weak var tableView: UITableView!
   
   // MARK: - Overrides
   
@@ -39,5 +40,22 @@ class AddStopViewController: UIViewController {
   @IBAction func dismissSearchView() {
     self.dismiss(animated: true, completion: nil)
   }
+  
+}
+
+
+// MARK: - Table View Data Source
+
+extension AddStopViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 3
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = UITableViewCell(style: .default, reuseIdentifier: "AddStopCell")
+    
+    return cell
+  }
+  
   
 }

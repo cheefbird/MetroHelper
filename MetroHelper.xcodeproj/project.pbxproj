@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D361456CCC1F68FCF4975025 /* Pods_MetroHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */; };
+		D529EB4E2203EBF600015675 /* TrainLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D529EB4D2203EBF600015675 /* TrainLine.swift */; };
 		D52BFF1321DEFBAF006A7058 /* StopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52BFF1221DEFBAF006A7058 /* StopTableViewController.swift */; };
 		D52BFF1721DEFD48006A7058 /* StopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52BFF1621DEFD48006A7058 /* StopTableViewCell.swift */; };
 		D537CB4D21FFD93B003FFB0E /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537CB4C21FFD93B003FFB0E /* Vehicle.swift */; };
-		D54DCE5A21E4627700F5E0F1 /* UIView+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DCE5921E4627700F5E0F1 /* UIView+Designable.swift */; };
 		D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DCE5F21E4674600F5E0F1 /* UserData.swift */; };
 		D54DCE6321E46E6F00F5E0F1 /* LAMetro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DCE6221E46E6F00F5E0F1 /* LAMetro.swift */; };
-		D54EFEDB2203E426004A9D9F /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EFEDA2203E426004A9D9F /* iOSDropDown.framework */; };
 		D54EFEDD2203E7D4004A9D9F /* UIButton+CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54EFEDC2203E7D4004A9D9F /* UIButton+CustomButton.swift */; };
 		D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E2A7921DEF6FD009826FB /* AppDelegate.swift */; };
 		D56E2A7F21DEF6FD009826FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A7D21DEF6FD009826FB /* Main.storyboard */; };
@@ -34,10 +33,10 @@
 
 /* Begin PBXFileReference section */
 		77F3D3BD3F04BD0D5EE5B31C /* Pods_MetroHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D529EB4D2203EBF600015675 /* TrainLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainLine.swift; sourceTree = "<group>"; };
 		D52BFF1221DEFBAF006A7058 /* StopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewController.swift; sourceTree = "<group>"; };
 		D52BFF1621DEFD48006A7058 /* StopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewCell.swift; sourceTree = "<group>"; };
 		D537CB4C21FFD93B003FFB0E /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		D54DCE5921E4627700F5E0F1 /* UIView+Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
 		D54DCE5F21E4674600F5E0F1 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D54DCE6221E46E6F00F5E0F1 /* LAMetro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAMetro.swift; sourceTree = "<group>"; };
 		D54EFEDA2203E426004A9D9F /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D54EFEDB2203E426004A9D9F /* iOSDropDown.framework in Frameworks */,
 				D361456CCC1F68FCF4975025 /* Pods_MetroHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +119,7 @@
 				D58CCAE621ED270400F52A99 /* Prediction.swift */,
 				D59502C321FA8B7C0036C06B /* VehicleLocation.swift */,
 				D537CB4C21FFD93B003FFB0E /* Vehicle.swift */,
+				D529EB4D2203EBF600015675 /* TrainLine.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,7 +146,6 @@
 		D54DCE5B21E4655F00F5E0F1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D54DCE5921E4627700F5E0F1 /* UIView+Designable.swift */,
 				D54EFEDC2203E7D4004A9D9F /* UIButton+CustomButton.swift */,
 			);
 			path = Extensions;
@@ -343,7 +341,6 @@
 			files = (
 				D59502BE21FA7F6A0036C06B /* VehicleLocationViewController.swift in Sources */,
 				D5AB89E92203DDDC00CB14DB /* AddStopViewController.swift in Sources */,
-				D54DCE5A21E4627700F5E0F1 /* UIView+Designable.swift in Sources */,
 				D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */,
 				D58CCAE721ED270400F52A99 /* Prediction.swift in Sources */,
 				D54DCE6321E46E6F00F5E0F1 /* LAMetro.swift in Sources */,
@@ -357,6 +354,7 @@
 				D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */,
 				D58CCAEA21ED451800F52A99 /* PredictionData.swift in Sources */,
 				D58CCAF221ED55B100F52A99 /* PredictionService.swift in Sources */,
+				D529EB4E2203EBF600015675 /* TrainLine.swift in Sources */,
 				D54EFEDD2203E7D4004A9D9F /* UIButton+CustomButton.swift in Sources */,
 				D52BFF1321DEFBAF006A7058 /* StopTableViewController.swift in Sources */,
 			);

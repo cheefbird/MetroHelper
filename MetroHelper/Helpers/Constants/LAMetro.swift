@@ -248,6 +248,18 @@ struct LAMetro {
       return results
     }
   }
+  
+  static func getAllLines() -> [TrainLine] {
+    var lines = [TrainLine]()
+    
+    lines.append(TrainLine(id: 802, displayName: "Metro Red Line (802)"))
+    lines.append(TrainLine(id: 804, displayName: "Metro Gold Line (804)"))
+    lines.append(TrainLine(id: 805, displayName: "Metro Purple Line (805)"))
+    lines.append(TrainLine(id: 806, displayName: "Metro Expo Line (806)"))
+    
+    return lines
+  }
+  
 }
 
 

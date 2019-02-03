@@ -20,6 +20,7 @@ class AddStopViewController: UIViewController {
   
   @IBOutlet weak var lineSelectField: DropDown!
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
   
   // MARK: - Overrides
   

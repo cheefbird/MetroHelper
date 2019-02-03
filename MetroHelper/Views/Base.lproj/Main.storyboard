@@ -84,6 +84,10 @@
                                 <color key="textColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1nN-1u-MLz">
+                                <rect key="frame" x="188.66666666666666" y="243" width="37" height="37"/>
+                                <color key="color" red="1" green="0.85284131585287803" blue="0.40619340509166635" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28Q-Fc-UUD" customClass="CustomButton" customModule="MetroHelper" customModuleProvider="target">
                                 <rect key="frame" x="67.666666666666657" y="193" width="278.66666666666674" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -120,14 +124,14 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4KD-R0-WxW">
-                                <rect key="frame" x="0.0" y="293" width="414" height="2"/>
+                                <rect key="frame" x="0.0" y="290" width="414" height="2"/>
                                 <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="Tvq-11-bIe"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E3n-ht-iXz">
-                                <rect key="frame" x="0.0" y="295" width="414" height="441"/>
+                                <rect key="frame" x="0.0" y="292" width="414" height="444"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.3411764706" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexColor" red="0.3411764706" green="0.3411764706" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -164,7 +168,10 @@
                         <constraints>
                             <constraint firstItem="E3n-ht-iXz" firstAttribute="top" secondItem="4KD-R0-WxW" secondAttribute="bottom" id="12s-ST-KXJ"/>
                             <constraint firstItem="Afc-ka-Bph" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wpr-wT-edE" secondAttribute="trailing" constant="30" id="1RQ-fL-7e2"/>
+                            <constraint firstItem="4KD-R0-WxW" firstAttribute="top" secondItem="1nN-1u-MLz" secondAttribute="bottom" constant="10" id="6iO-ou-vpL"/>
                             <constraint firstItem="KBf-Bx-0ot" firstAttribute="top" secondItem="Wpr-wT-edE" secondAttribute="bottom" constant="14" id="A6s-pX-gVw"/>
+                            <constraint firstItem="1nN-1u-MLz" firstAttribute="centerX" secondItem="Zf3-0L-oCs" secondAttribute="centerX" id="A7S-eI-Phf"/>
+                            <constraint firstItem="1nN-1u-MLz" firstAttribute="top" secondItem="28Q-Fc-UUD" secondAttribute="bottom" constant="10" id="Byy-T2-tWJ"/>
                             <constraint firstItem="4KD-R0-WxW" firstAttribute="leading" secondItem="Zf3-0L-oCs" secondAttribute="leading" id="Dx3-Bc-zx8"/>
                             <constraint firstItem="28Q-Fc-UUD" firstAttribute="top" secondItem="KBf-Bx-0ot" secondAttribute="bottom" constant="20" id="GbZ-7e-xBj"/>
                             <constraint firstItem="KBf-Bx-0ot" firstAttribute="width" secondItem="28Q-Fc-UUD" secondAttribute="width" constant="25" id="H8X-HJ-oJw"/>
@@ -178,7 +185,6 @@
                             <constraint firstItem="Afc-ka-Bph" firstAttribute="trailing" secondItem="XnI-B0-Hc7" secondAttribute="trailing" constant="20" id="o44-ut-qcu"/>
                             <constraint firstAttribute="trailing" secondItem="4KD-R0-WxW" secondAttribute="trailing" id="ogE-Ad-CbP"/>
                             <constraint firstItem="Afc-ka-Bph" firstAttribute="trailing" secondItem="E3n-ht-iXz" secondAttribute="trailing" id="pCE-UR-bWr"/>
-                            <constraint firstItem="4KD-R0-WxW" firstAttribute="top" secondItem="28Q-Fc-UUD" secondAttribute="bottom" constant="60" id="phE-5C-PAq"/>
                             <constraint firstItem="KBf-Bx-0ot" firstAttribute="centerX" secondItem="Zf3-0L-oCs" secondAttribute="centerX" id="qnw-Sn-5ta"/>
                             <constraint firstItem="Afc-ka-Bph" firstAttribute="bottom" secondItem="E3n-ht-iXz" secondAttribute="bottom" id="vGW-PW-h0k"/>
                         </constraints>
@@ -186,6 +192,7 @@
                     </view>
                     <connections>
                         <outlet property="lineSelectField" destination="KBf-Bx-0ot" id="CGn-gv-4v5"/>
+                        <outlet property="loadingSpinner" destination="1nN-1u-MLz" id="dHK-1Z-2w7"/>
                         <outlet property="tableView" destination="E3n-ht-iXz" id="KRJ-c1-bkG"/>
                     </connections>
                 </viewController>

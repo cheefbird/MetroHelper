@@ -15,6 +15,8 @@
 		D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DCE5F21E4674600F5E0F1 /* UserData.swift */; };
 		D54DCE6321E46E6F00F5E0F1 /* LAMetro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DCE6221E46E6F00F5E0F1 /* LAMetro.swift */; };
 		D54EFEDD2203E7D4004A9D9F /* UIButton+CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54EFEDC2203E7D4004A9D9F /* UIButton+CustomButton.swift */; };
+		D5660589220702400071CD91 /* AddStopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5660588220702400071CD91 /* AddStopTableViewCell.swift */; };
+		D566058B2207035E0071CD91 /* UIView+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566058A2207035E0071CD91 /* UIView+Designable.swift */; };
 		D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E2A7921DEF6FD009826FB /* AppDelegate.swift */; };
 		D56E2A7F21DEF6FD009826FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A7D21DEF6FD009826FB /* Main.storyboard */; };
 		D56E2A8121DEF6FF009826FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A8021DEF6FF009826FB /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		D54DCE6221E46E6F00F5E0F1 /* LAMetro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAMetro.swift; sourceTree = "<group>"; };
 		D54EFEDA2203E426004A9D9F /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54EFEDC2203E7D4004A9D9F /* UIButton+CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+CustomButton.swift"; sourceTree = "<group>"; };
+		D5660588220702400071CD91 /* AddStopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStopTableViewCell.swift; sourceTree = "<group>"; };
+		D566058A2207035E0071CD91 /* UIView+Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
 		D56E2A7621DEF6FD009826FB /* MetroHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E2A7921DEF6FD009826FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D56E2A7E21DEF6FD009826FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			children = (
 				D52BFF1621DEFD48006A7058 /* StopTableViewCell.swift */,
 				D58CCADE21ED1D1E00F52A99 /* PredictionTableViewCell.swift */,
+				D5660588220702400071CD91 /* AddStopTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				D54EFEDC2203E7D4004A9D9F /* UIButton+CustomButton.swift */,
+				D566058A2207035E0071CD91 /* UIView+Designable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,10 +353,12 @@
 				D58CCAE521ED23DC00F52A99 /* Stop.swift in Sources */,
 				D58CCAEC21ED489500F52A99 /* PredictionTableViewController.swift in Sources */,
 				D59502C421FA8B7C0036C06B /* VehicleLocation.swift in Sources */,
+				D566058B2207035E0071CD91 /* UIView+Designable.swift in Sources */,
 				D537CB4D21FFD93B003FFB0E /* Vehicle.swift in Sources */,
 				D52BFF1721DEFD48006A7058 /* StopTableViewCell.swift in Sources */,
 				D58CCAF021ED4D7D00F52A99 /* MetroRouter.swift in Sources */,
 				D58CCADF21ED1D1E00F52A99 /* PredictionTableViewCell.swift in Sources */,
+				D5660589220702400071CD91 /* AddStopTableViewCell.swift in Sources */,
 				D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */,
 				D58CCAEA21ED451800F52A99 /* PredictionData.swift in Sources */,
 				D58CCAF221ED55B100F52A99 /* MetroService.swift in Sources */,

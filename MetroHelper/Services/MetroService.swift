@@ -97,7 +97,7 @@ class MetroService {
   
   // MARK: - GET Stops for Given Line
   
-  func getAllStops(forLine line: TrainLine, completionHandler: @escaping (Result<[Stop]>) -> Void) {
+  func getStops(forLine line: TrainLine, completionHandler: @escaping (Result<[Stop]>) -> Void) {
     Alamofire.request(MetroRouter.getStops(line))
       .responseJSON { result in
         let stops = self.buildStopsArray(fromResponse: result, forLine: line)

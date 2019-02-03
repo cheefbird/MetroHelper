@@ -13,6 +13,8 @@ class AddStopTableViewCell: UITableViewCell {
   // MARK: - Outlets
   
   @IBOutlet weak var contentContainer: UIView!
+  @IBOutlet weak var lineDisplayName: UILabel!
+  @IBOutlet weak var stopDisplayName: UILabel!
   
   // MARK: - Overrides
   

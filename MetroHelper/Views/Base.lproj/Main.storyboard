@@ -147,7 +147,30 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voC-oa-RFp" customClass="CustomView" customModule="MetroHelper" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="8" width="390" height="82.666666666666671"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Line Display Name (Num)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvv-mg-Rvv">
+                                                            <rect key="frame" x="20" y="8" width="350" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                            <color key="textColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stop Display Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ja1-kf-4EG">
+                                                            <rect key="frame" x="20" y="34" width="350" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                                            <color key="textColor" red="0.0" green="0.83529411760000005" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.3411764706" green="0.3411764706" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ja1-kf-4EG" secondAttribute="trailing" constant="20" id="3EJ-5V-060"/>
+                                                        <constraint firstItem="tvv-mg-Rvv" firstAttribute="leading" secondItem="voC-oa-RFp" secondAttribute="leading" constant="20" id="WG0-Y9-Zjr"/>
+                                                        <constraint firstItem="ja1-kf-4EG" firstAttribute="top" secondItem="tvv-mg-Rvv" secondAttribute="bottom" constant="8" id="ZlV-OB-3xw"/>
+                                                        <constraint firstItem="ja1-kf-4EG" firstAttribute="leading" secondItem="voC-oa-RFp" secondAttribute="leading" constant="20" id="jXZ-j3-CcJ"/>
+                                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="tvv-mg-Rvv" secondAttribute="trailing" constant="20" id="n3i-bh-Mzj"/>
+                                                        <constraint firstItem="tvv-mg-Rvv" firstAttribute="top" secondItem="voC-oa-RFp" secondAttribute="top" constant="10" id="xnX-uF-6KD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ja1-kf-4EG" secondAttribute="bottom" constant="10" id="z76-G0-Tsh"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                             <color key="value" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -171,6 +194,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentContainer" destination="voC-oa-RFp" id="ZUy-ga-Npo"/>
+                                            <outlet property="lineDisplayName" destination="tvv-mg-Rvv" id="hoT-fB-dFO"/>
+                                            <outlet property="stopDisplayName" destination="ja1-kf-4EG" id="Yfy-qq-gk7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

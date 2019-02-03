@@ -34,6 +34,12 @@ class AddStopViewController: UIViewController {
     }
     
     lineSelectField.optionArray = lineNames
+    
+    lineSelectField.didSelect { (selectedText, index, id) in
+      let selectedLine = self.allLines[index]
+      
+      self.fetchStops(forTrainLine: selectedLine)
+    }
   }
   
   // MARK: - IBActions
@@ -42,6 +48,24 @@ class AddStopViewController: UIViewController {
     self.dismiss(animated: true, completion: nil)
   }
   
+  // MARK: - Data Methods
+  
+  private func fetchStops(forTrainLine line: TrainLine) {
+    MetroService.sharedInstance.getStops(forLine: line) { result in
+      
+      guard result.error == nil else {
+        // TODO: Show error in alert modal
+        print(result.error.debugDescription)
+        return
+      }
+      
+      if let stops = result.value {
+        self.availableStops = stops
+      }
+      
+      self.tableView.reloadData()
+    }
+  }
 }
 
 

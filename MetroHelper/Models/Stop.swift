@@ -31,4 +31,12 @@ struct Stop {
     self.longitude = nil
     self.line = nil
   }
+  
+  init(displayName: String, id: Int, line: TrainLine) {
+    self.displayName = displayName
+    self.id = id
+    self.line = line
+    self.latitude = nil
+    self.longitude = nil
+  }
 }

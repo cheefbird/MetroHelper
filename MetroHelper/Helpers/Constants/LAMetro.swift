@@ -187,10 +187,7 @@ struct LAMetro {
     // Palms station stops
     stops.append(Stop(displayName: Station.palms.name, id: Station.palms.id))
     
-    print(stops)
-    
     return stops
-    
   }
   
   /// Helper method that converts runId String to relevant direction of "Home" or "Work".
@@ -248,6 +245,18 @@ struct LAMetro {
       return results
     }
   }
+  
+  static func getAllLines() -> [TrainLine] {
+    var lines = [TrainLine]()
+    
+    lines.append(TrainLine(id: 802, displayName: "Metro Red Line (802)"))
+    lines.append(TrainLine(id: 804, displayName: "Metro Gold Line (804)"))
+    lines.append(TrainLine(id: 805, displayName: "Metro Purple Line (805)"))
+    lines.append(TrainLine(id: 806, displayName: "Metro Expo Line (806)"))
+    
+    return lines
+  }
+  
 }
 
 

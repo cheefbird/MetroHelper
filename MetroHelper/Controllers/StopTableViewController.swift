@@ -12,16 +12,10 @@ class StopTableViewController: UITableViewController {
   
   // MARK: - Properties
   let allStopNames = LAMetro.allStopNames
-  let allStops = LAMetro.allStops()
+  var allStops = LAMetro.allStops()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = false
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem
   }
   
   // MARK: - Table view data source
@@ -48,23 +42,8 @@ class StopTableViewController: UITableViewController {
     return cell
   }
   
-  // MARK: - Methods
-  
-  // TODO: Pass StopID to PredictionTableVC for its fetch method
-  
-  
-  /*
-   // Override to support conditional editing of the table view.
-   override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-   // Return false if you do not want the specified item to be editable.
-   return true
-   }
-   */
-  
-  
   // MARK: - Navigation
   
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     // Get the new view controller using segue.destination.
     // Pass the selected object to the new view controller.
@@ -75,8 +54,20 @@ class StopTableViewController: UITableViewController {
       if let indexPath = tableView.indexPathForSelectedRow {
         nextVC.stop = allStops[indexPath.row]
       }
+    } else if segue.identifier == "presentAddStop" {
+      let nextVC = segue.destination as! AddStopViewController
+      nextVC.delegate = self
     }
   }
+}
+
+// MARK: - Stop Modifier Delegate
+
+extension StopTableViewController: StopModifierDelegate {
   
-  
+  func addStop(_ stop: Stop) {
+    allStops.append(stop)
+    
+    self.tableView.reloadData()
+  }
 }

@@ -10,20 +10,21 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class PredictionService {
+class MetroService {
   
   // MARK: - Properties
   
-  static let sharedInstance = PredictionService()
+  static let sharedInstance = MetroService()
   
   // MARK: - Init
   
   private init() {}
   
+  
   // MARK: - GET Predictions
   
   func getPredictions(forStop stopId: Int, completionHandler: @escaping (Result<[Prediction]>) -> Void) {
-    Alamofire.request(PredictionRouter.getPredictions(stopId))
+    Alamofire.request(MetroRouter.getPredictions(stopId))
       .responseJSON { response in
         let result = self.buildPredictionsArray(response: response)
         
@@ -60,8 +61,11 @@ class PredictionService {
     return .success(predictions)
   }
   
+  
+  // MARK: - GET Train Location
+  
   func getTrainLocation(forTrainId trainId: Int, completionHandler: @escaping (Result<VehicleLocation>) -> Void) {
-    Alamofire.request(PredictionRouter.getVehicleInfo(trainId))
+    Alamofire.request(MetroRouter.getVehicleInfo(trainId))
       .responseJSON { response in
         let vehicle = self.createVehicleLocation(fromResponse: response, withTrainID: trainId)
         
@@ -88,6 +92,40 @@ class PredictionService {
     } else {
       return .failure(PredictionRouterError.serializationError(reason: "Could not turn JSON into a Vehicle"))
     }
+  }
+  
+  
+  // MARK: - GET Stops for Given Line
+  
+  func getStops(forLine line: TrainLine, completionHandler: @escaping (Result<[Stop]>) -> Void) {
+    Alamofire.request(MetroRouter.getStops(line))
+      .responseJSON { result in
+        let stops = self.buildStopsArray(fromResponse: result, forLine: line)
+        
+        completionHandler(stops)
+    }
+  }
+  
+  private func buildStopsArray(fromResponse response: DataResponse<Any>, forLine line: TrainLine) -> Result<[Stop]> {
+    guard response.result.error == nil else {
+      print(response.result.error!)
+      return .failure(PredictionRouterError.routingError(reason: "Network error: \(response.result.error!)"))
+    }
+    
+    guard let json = response.result.value else {
+      return .failure(PredictionRouterError.routingError(reason: "No value was returned from the API."))
+    }
+    
+    let rawResult = JSON(json)
+    let results = rawResult["items"].arrayValue
+    
+    var stops = [Stop]()
+    
+    for result in results {
+      stops.append(Stop(forLine: line, fromJSON: result))
+    }
+    
+    return .success(stops)
   }
   
 }

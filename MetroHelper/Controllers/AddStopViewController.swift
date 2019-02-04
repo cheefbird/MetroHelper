@@ -15,6 +15,7 @@ class AddStopViewController: UIViewController {
   
   let allLines = LAMetro.getAllLines()
   var availableStops = [Stop]()
+  var selectedLine: TrainLine?
   
   // MARK: - Outlets
   
@@ -37,6 +38,7 @@ class AddStopViewController: UIViewController {
     
     lineSelectField.didSelect { (selectedText, index, id) in
       let selectedLine = self.allLines[index]
+      self.selectedLine = selectedLine
       
       self.fetchStops(forTrainLine: selectedLine)
     }
@@ -73,11 +75,20 @@ class AddStopViewController: UIViewController {
 
 extension AddStopViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    if availableStops.count < 1 {
+      return 0
+    } else {
+      return availableStops.count
+    }
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell(style: .default, reuseIdentifier: "AddStopCell")
+    let cell = tableView.dequeueReusableCell(withIdentifier: "AddStopCell", for: indexPath) as! AddStopTableViewCell
+    
+    let stop = availableStops[indexPath.row]
+    guard let line = selectedLine?.displayName else { return cell }
+    
+    cell.configure(forStopNamed: stop.displayName, withLineNamed: line)
     
     return cell
   }

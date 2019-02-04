@@ -29,4 +29,11 @@ class AddStopTableViewCell: UITableViewCell {
     // Configure the view for the selected state
   }
   
+  // MARK - Configure
+  
+  func configure(forStopNamed stopName: String, withLineNamed lineName: String) {
+    stopDisplayName.text = stopName
+    lineDisplayName.text = lineName
+  }
+  
 }

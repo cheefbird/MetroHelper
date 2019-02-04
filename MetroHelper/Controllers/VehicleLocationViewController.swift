@@ -41,7 +41,7 @@ class VehicleLocationViewController: UIViewController {
   // MARK: - Data Methods
   
   private func fetchVehicleLocation() {
-    PredictionService.sharedInstance.getTrainLocation(forTrainId: trainId) { result in
+    MetroService.sharedInstance.getTrainLocation(forTrainId: trainId) { result in
       guard result.error == nil else {
         // TODO: Show error in alert modal
         print(result.error.debugDescription)
@@ -57,18 +57,8 @@ class VehicleLocationViewController: UIViewController {
     }
   }
   
-  
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destination.
-   // Pass the selected object to the new view controller.
-   }
-   */
-  
   // MARK: - Methods
+  
   private func centerMap(onLocation location: CLLocationCoordinate2D) {
     let testRegion = MKCoordinateRegion(center: location, latitudinalMeters: 1000, longitudinalMeters: 1000)
     mapView.setRegion(testRegion, animated: true)

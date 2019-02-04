@@ -9,12 +9,13 @@
 import Foundation
 import Alamofire
 
-enum PredictionRouter: URLRequestConvertible {
+enum MetroRouter: URLRequestConvertible {
   
   // MARK: - Routes
   
   case getPredictions(Int)
   case getVehicleInfo(Int)
+  case getStops(TrainLine)
   
   // MARK: - URL Components
   
@@ -34,6 +35,9 @@ enum PredictionRouter: URLRequestConvertible {
       
     case .getVehicleInfo(let trainId):
       return "/agencies/\(LAMetro.agency)/vehicles/\(trainId)/"
+      
+    case .getStops(let line):
+      return "/agencies/\(LAMetro.agency)/routes/\(line.id)/stops/"
     }
   }
   

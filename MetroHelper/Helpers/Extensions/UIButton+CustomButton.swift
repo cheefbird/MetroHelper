@@ -1,16 +1,16 @@
 //
-//  UIView+Designable.swift
+//  UIButton+CustomButton.swift
 //  MetroHelper
 //
-//  Created by Francis Breidenbach on 2/3/19.
+//  Created by Francis Breidenbach on 1/31/19.
 //  Copyright © 2019 Francis Breidenbach. All rights reserved.
 //
 
 import UIKit
 
-@IBDesignable class CustomView: UIView {}
+@IBDesignable class CustomButton: UIButton {}
 
-extension CustomView {
+extension UIButton {
   @IBInspectable var cornerRadius: CGFloat {
     get {
       return layer.cornerRadius

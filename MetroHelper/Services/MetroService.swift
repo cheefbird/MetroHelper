@@ -23,6 +23,11 @@ class MetroService {
   
   // MARK: - GET Predictions
   
+  /// Retrieve Predictions for a given Stop ID.
+  ///
+  /// - Parameters:
+  ///   - stopId: ID of the Stop for which Predictions should be fetched.
+  ///   - completionHandler: Closure that receives a Result object containing an array of Predictions but returns nothing.
   func getPredictions(forStop stopId: Int, completionHandler: @escaping (Result<[Prediction]>) -> Void) {
     Alamofire.request(MetroRouter.getPredictions(stopId))
       .responseJSON { response in
@@ -32,6 +37,10 @@ class MetroService {
     }
   }
   
+  /// Convert response to Result with array of Predictions.
+  ///
+  /// - Parameter response: DataResponse of type Any. This should be the raw response object from **getPredictions(forStop:completionHandler:)**
+  /// - Returns: Result object of type Prediction array.
   private func buildPredictionsArray(response: DataResponse<Any>) -> Result<[Prediction]> {
     
     guard response.result.error == nil else {
@@ -64,6 +73,11 @@ class MetroService {
   
   // MARK: - GET Train Location
   
+  /// Retrieve a Vehicle's location.
+  ///
+  /// - Parameters:
+  ///   - trainId: ID of the train for which you want Predictions.
+  ///   - completionHandler: Closure that receives a Result object containing a single VehicleLocation but returns nothing.
   func getTrainLocation(forTrainId trainId: Int, completionHandler: @escaping (Result<VehicleLocation>) -> Void) {
     Alamofire.request(MetroRouter.getVehicleInfo(trainId))
       .responseJSON { response in
@@ -73,6 +87,12 @@ class MetroService {
     }
   }
   
+  /// Convert response to Result with VehicleLocation.
+  ///
+  /// - Parameters:
+  ///   - response: DataResponse of type Any. This should be the raw response object from **getTrainLocation(forTrainId:completionHandler:)**
+  ///   - trainId: Ensures link between created VehicleLocation and train ID used to fetch data.
+  /// - Returns: Result object containing a single VehicleLocation.
   private func createVehicleLocation(fromResponse response: DataResponse<Any>, withTrainID trainId: Int) -> Result<VehicleLocation> {
     guard response.result.error == nil else {
       print(response.result.error!)
@@ -97,6 +117,11 @@ class MetroService {
   
   // MARK: - GET Stops for Given Line
   
+  /// Retrieve all Stops for a given TrainLine.
+  ///
+  /// - Parameters:
+  ///   - line: TrainLine object for which you want all Stops.
+  ///   - completionHandler: Closure that receives a Result object containing an array of Stops but returns nothing.
   func getStops(forLine line: TrainLine, completionHandler: @escaping (Result<[Stop]>) -> Void) {
     Alamofire.request(MetroRouter.getStops(line))
       .responseJSON { result in
@@ -106,6 +131,12 @@ class MetroService {
     }
   }
   
+  /// Convert response to an array of Stops.
+  ///
+  /// - Parameters:
+  ///   - response: DataResponse of type Any. This should be the raw response object from **getStops(forLine:completionHandler:)**
+  ///   - line: TrainLine object required to ensure link between Stops and TrainLine used to generate them.
+  /// - Returns: Result object containing an array of Stops.
   private func buildStopsArray(fromResponse response: DataResponse<Any>, forLine line: TrainLine) -> Result<[Stop]> {
     guard response.result.error == nil else {
       print(response.result.error!)

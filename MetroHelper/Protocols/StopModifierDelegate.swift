@@ -10,9 +10,10 @@ import Foundation
 
 protocol StopModifierDelegate: AnyObject  {
   
-  // MARK: - Properties
-  
   // MARK: - Methods
   
+  /// Add a Stop object to the receiver's **allStops** array.
+  ///
+  /// - Parameter stop: Stop object to be added to receiver's array.
   func addStop(_ stop: Stop)
 }

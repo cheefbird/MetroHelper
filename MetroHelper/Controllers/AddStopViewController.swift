@@ -74,7 +74,6 @@ class AddStopViewController: UIViewController {
   }
 }
 
-
 // MARK: - Table View Data Source
 
 extension AddStopViewController: UITableViewDataSource {

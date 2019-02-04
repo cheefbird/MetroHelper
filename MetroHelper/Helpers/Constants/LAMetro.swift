@@ -187,10 +187,7 @@ struct LAMetro {
     // Palms station stops
     stops.append(Stop(displayName: Station.palms.name, id: Station.palms.id))
     
-    print(stops)
-    
     return stops
-    
   }
   
   /// Helper method that converts runId String to relevant direction of "Home" or "Work".

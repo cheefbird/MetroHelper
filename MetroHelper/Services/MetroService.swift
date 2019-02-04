@@ -44,7 +44,7 @@ class MetroService {
   private func buildPredictionsArray(response: DataResponse<Any>) -> Result<[Prediction]> {
     
     guard response.result.error == nil else {
-      print(response.result.error!)
+      debugPrint(response.result.error!)
       return .failure(PredictionRouterError.routingError(reason: "Network error: \(response.result.error!)"))
     }
     
@@ -64,8 +64,6 @@ class MetroService {
         return .failure(PredictionRouterError.serializationError(reason: "Unable to serialize predictions."))
       }
     }
-    
-    print(predictions)
     
     return .success(predictions)
   }
@@ -95,7 +93,7 @@ class MetroService {
   /// - Returns: Result object containing a single VehicleLocation.
   private func createVehicleLocation(fromResponse response: DataResponse<Any>, withTrainID trainId: Int) -> Result<VehicleLocation> {
     guard response.result.error == nil else {
-      print(response.result.error!)
+      debugPrint(response.result.error!)
       return .failure(PredictionRouterError.routingError(reason: "Network error: \(response.result.error!)"))
     }
     
@@ -139,7 +137,7 @@ class MetroService {
   /// - Returns: Result object containing an array of Stops.
   private func buildStopsArray(fromResponse response: DataResponse<Any>, forLine line: TrainLine) -> Result<[Stop]> {
     guard response.result.error == nil else {
-      print(response.result.error!)
+      debugPrint(response.result.error!)
       return .failure(PredictionRouterError.routingError(reason: "Network error: \(response.result.error!)"))
     }
     

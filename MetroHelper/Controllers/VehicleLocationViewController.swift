@@ -44,7 +44,7 @@ class VehicleLocationViewController: UIViewController {
     MetroService.sharedInstance.getTrainLocation(forTrainId: trainId) { result in
       guard result.error == nil else {
         // TODO: Show error in alert modal
-        print(result.error.debugDescription)
+        debugPrint(result.error.debugDescription)
         return
       }
       

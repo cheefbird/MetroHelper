@@ -23,8 +23,6 @@ class PredictionTableViewController: UITableViewController {
     
     self.title = stop.displayName
     
-    print(stop.id)
-    
     fetchPredictions()
     
     self.refreshControl?.addTarget(self, action: #selector(fetchPredictions), for: .valueChanged)
@@ -98,7 +96,7 @@ class PredictionTableViewController: UITableViewController {
       
       guard result.error == nil else {
         // TODO: Show error in alert modal
-        print(result.error.debugDescription)
+        debugPrint(result.error.debugDescription)
         return
       }
       

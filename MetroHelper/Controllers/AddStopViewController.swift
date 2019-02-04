@@ -16,6 +16,7 @@ class AddStopViewController: UIViewController {
   let allLines = LAMetro.getAllLines()
   var availableStops = [Stop]()
   var selectedLine: TrainLine?
+  weak var delegate: StopModifierDelegate!
   
   // MARK: - Outlets
   
@@ -95,6 +96,18 @@ extension AddStopViewController: UITableViewDataSource {
     
     return cell
   }
-  
-  
+}
+
+// MARK: - Table View Delegate
+
+extension AddStopViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let stopToAdd = availableStops[indexPath.row]
+    
+//    delegate.addStop(stopToAdd)
+    
+    self.dismiss(animated: true) { [weak self] in
+      self?.delegate.addStop(stopToAdd)
+    }
+  }
 }

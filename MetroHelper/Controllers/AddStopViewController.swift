@@ -37,6 +37,8 @@ class AddStopViewController: UIViewController {
     lineSelectField.optionArray = lineNames
     
     lineSelectField.didSelect { (selectedText, index, id) in
+      self.loadingSpinner.startAnimating()
+      
       let selectedLine = self.allLines[index]
       self.selectedLine = selectedLine
       
@@ -65,6 +67,7 @@ class AddStopViewController: UIViewController {
         self.availableStops = stops
       }
       
+      self.loadingSpinner.stopAnimating()
       self.tableView.reloadData()
     }
   }

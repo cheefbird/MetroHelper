@@ -54,7 +54,7 @@
                         <barButtonItem key="backBarButtonItem" title="Stops" id="BFG-dI-qm6"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ozg-X8-P13">
                             <connections>
-                                <segue destination="cth-dr-r1c" kind="presentation" id="Q8Y-B8-FaD"/>
+                                <segue destination="cth-dr-r1c" kind="presentation" identifier="presentAddStop" id="Q8Y-B8-FaD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

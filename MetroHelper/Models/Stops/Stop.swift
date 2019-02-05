@@ -9,9 +9,9 @@
 import Foundation
 import SwiftyJSON
 
-struct Stop {
-  let latitude: Float?
-  let longitude: Float?
+class Stop: StopObject {
+  let latitude: Float
+  let longitude: Float
   var displayName: String
   var id: Int
   let line: TrainLine?
@@ -27,8 +27,8 @@ struct Stop {
   init(displayName: String, id: Int) {
     self.displayName = displayName
     self.id = id
-    self.latitude = nil
-    self.longitude = nil
+    self.latitude = 0
+    self.longitude = 0
     self.line = nil
   }
   
@@ -36,7 +36,7 @@ struct Stop {
     self.displayName = displayName
     self.id = id
     self.line = line
-    self.latitude = nil
-    self.longitude = nil
+    self.latitude = 0
+    self.longitude = 0
   }
 }

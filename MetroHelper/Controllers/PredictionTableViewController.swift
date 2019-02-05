@@ -12,7 +12,7 @@ class PredictionTableViewController: UITableViewController {
   
   // MARK: - Properties
   
-  var stop: Stop!
+  var stop: StopObject!
   var homePredictions = [Prediction]()
   var workPredictions = [Prediction]()
   

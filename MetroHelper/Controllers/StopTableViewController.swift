@@ -62,7 +62,7 @@ class StopTableViewController: UITableViewController {
     if segue.identifier == "showPredictions" {
       let nextVC = segue.destination as! PredictionTableViewController
       if let indexPath = tableView.indexPathForSelectedRow {
-        nextVC.stop = allStops[indexPath.row]
+        nextVC.stop = stops[indexPath.row]
       }
     } else if segue.identifier == "presentAddStop" {
       let nextVC = segue.destination as! AddStopViewController

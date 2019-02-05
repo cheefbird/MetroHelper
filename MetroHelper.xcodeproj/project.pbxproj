@@ -189,11 +189,11 @@
 		D56E2A6D21DEF6FD009826FB = {
 			isa = PBXGroup;
 			children = (
-				D5682F2A22090BDB0099021E /* README.MD */,
 				D56E2A7821DEF6FD009826FB /* MetroHelper */,
 				D56E2A7721DEF6FD009826FB /* Products */,
 				759C7143002902D465A221B0 /* Pods */,
 				5C66A0F9BF42C14AF086078A /* Frameworks */,
+				D5682F2A22090BDB0099021E /* README.MD */,
 			);
 			sourceTree = "<group>";
 		};
@@ -337,6 +337,8 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MetroHelper/Pods-MetroHelper-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework",
 			);
@@ -345,6 +347,8 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSDropDown.framework",
 			);

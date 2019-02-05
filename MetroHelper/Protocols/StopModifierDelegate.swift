@@ -15,5 +15,5 @@ protocol StopModifierDelegate: AnyObject  {
   /// Add a Stop object to the receiver's **allStops** array.
   ///
   /// - Parameter stop: Stop object to be added to receiver's array.
-  func addStop(_ stop: Stop)
+  func addStop(_ stop: StopObject)
 }

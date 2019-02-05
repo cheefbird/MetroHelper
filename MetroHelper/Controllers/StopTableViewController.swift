@@ -101,6 +101,8 @@ class StopTableViewController: UITableViewController {
   // MARK: - Methods
   
   private func setTableEditable() {
+    print("SET TABLE EDITABLE DEBUG:")
+    print(stops.count)
     if stops.count < 1 {
       tableView.allowsSelection = false
     }
@@ -119,6 +121,7 @@ extension StopTableViewController: StopModifierDelegate {
       realm.add(newRealmStop)
     }
     
+    self.tableView.allowsSelection = true
     self.tableView.reloadData()
   }
 }

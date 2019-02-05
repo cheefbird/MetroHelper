@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class StopTableViewController: UITableViewController {
   
@@ -14,28 +15,39 @@ class StopTableViewController: UITableViewController {
   let allStopNames = LAMetro.allStopNames
   var allStops = LAMetro.allStops()
   
+  var stops: Results<RealmStop>!
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let realm = try! Realm()
+    
+    stops = realm.objects(RealmStop.self)
   }
   
   // MARK: - Table view data source
   
   override func numberOfSections(in tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
     return 1
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete implementation, return the number of rows
-    return allStops.count
+    return stops.count > 0 ? stops.count : 1
   }
   
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let stop = allStops[indexPath.row]
-    
     let cell = tableView.dequeueReusableCell(withIdentifier: "StopCell", for: indexPath)
+    
+    guard stops.count > 0 else {
+      cell.textLabel?.text = "Add Stops to Continue!"
+      return cell
+    }
+    
+    let stop = stops[indexPath.row]
     
     cell.textLabel?.text = stop.displayName
     

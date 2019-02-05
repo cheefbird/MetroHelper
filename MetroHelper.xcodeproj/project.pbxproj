@@ -18,6 +18,7 @@
 		D5660589220702400071CD91 /* AddStopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5660588220702400071CD91 /* AddStopTableViewCell.swift */; };
 		D566058B2207035E0071CD91 /* UIView+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566058A2207035E0071CD91 /* UIView+Designable.swift */; };
 		D5682F292208F5450099021E /* StopModifierDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5682F282208F5450099021E /* StopModifierDelegate.swift */; };
+		D5682F2B22090BDB0099021E /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = D5682F2A22090BDB0099021E /* README.MD */; };
 		D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E2A7921DEF6FD009826FB /* AppDelegate.swift */; };
 		D56E2A7F21DEF6FD009826FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A7D21DEF6FD009826FB /* Main.storyboard */; };
 		D56E2A8121DEF6FF009826FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A8021DEF6FF009826FB /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		D5660588220702400071CD91 /* AddStopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStopTableViewCell.swift; sourceTree = "<group>"; };
 		D566058A2207035E0071CD91 /* UIView+Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
 		D5682F282208F5450099021E /* StopModifierDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopModifierDelegate.swift; sourceTree = "<group>"; };
+		D5682F2A22090BDB0099021E /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		D56E2A7621DEF6FD009826FB /* MetroHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E2A7921DEF6FD009826FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D56E2A7E21DEF6FD009826FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		D56E2A6D21DEF6FD009826FB = {
 			isa = PBXGroup;
 			children = (
+				D5682F2A22090BDB0099021E /* README.MD */,
 				D56E2A7821DEF6FD009826FB /* MetroHelper */,
 				D56E2A7721DEF6FD009826FB /* Products */,
 				759C7143002902D465A221B0 /* Pods */,
@@ -294,6 +297,7 @@
 			files = (
 				D56E2A8421DEF6FF009826FB /* LaunchScreen.storyboard in Resources */,
 				D56E2A8121DEF6FF009826FB /* Assets.xcassets in Resources */,
+				D5682F2B22090BDB0099021E /* README.MD in Resources */,
 				D56E2A7F21DEF6FD009826FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

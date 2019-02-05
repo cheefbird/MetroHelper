@@ -23,6 +23,8 @@
 		D56E2A7F21DEF6FD009826FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A7D21DEF6FD009826FB /* Main.storyboard */; };
 		D56E2A8121DEF6FF009826FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A8021DEF6FF009826FB /* Assets.xcassets */; };
 		D56E2A8421DEF6FF009826FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E2A8221DEF6FF009826FB /* LaunchScreen.storyboard */; };
+		D58325702209239000F27FC2 /* StopObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D583256F2209239000F27FC2 /* StopObject.swift */; };
+		D58325722209253800F27FC2 /* RealmStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58325712209253800F27FC2 /* RealmStop.swift */; };
 		D58CCADF21ED1D1E00F52A99 /* PredictionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCADE21ED1D1E00F52A99 /* PredictionTableViewCell.swift */; };
 		D58CCAE521ED23DC00F52A99 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAE421ED23DC00F52A99 /* Stop.swift */; };
 		D58CCAE721ED270400F52A99 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CCAE621ED270400F52A99 /* Prediction.swift */; };
@@ -55,6 +57,8 @@
 		D56E2A8021DEF6FF009826FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D56E2A8321DEF6FF009826FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D56E2A8521DEF6FF009826FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D583256F2209239000F27FC2 /* StopObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopObject.swift; sourceTree = "<group>"; };
+		D58325712209253800F27FC2 /* RealmStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStop.swift; sourceTree = "<group>"; };
 		D58CCADE21ED1D1E00F52A99 /* PredictionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionTableViewCell.swift; sourceTree = "<group>"; };
 		D58CCAE421ED23DC00F52A99 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		D58CCAE621ED270400F52A99 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
@@ -123,7 +127,7 @@
 		D52BFF1121DEFAE7006A7058 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D58CCAE421ED23DC00F52A99 /* Stop.swift */,
+				D583256E2209235F00F27FC2 /* Stops */,
 				D58CCAE621ED270400F52A99 /* Prediction.swift */,
 				D59502C321FA8B7C0036C06B /* VehicleLocation.swift */,
 				D537CB4C21FFD93B003FFB0E /* Vehicle.swift */,
@@ -219,6 +223,16 @@
 				D56E2A8521DEF6FF009826FB /* Info.plist */,
 			);
 			path = MetroHelper;
+			sourceTree = "<group>";
+		};
+		D583256E2209235F00F27FC2 /* Stops */ = {
+			isa = PBXGroup;
+			children = (
+				D58CCAE421ED23DC00F52A99 /* Stop.swift */,
+				D583256F2209239000F27FC2 /* StopObject.swift */,
+				D58325712209253800F27FC2 /* RealmStop.swift */,
+			);
+			path = Stops;
 			sourceTree = "<group>";
 		};
 		D58CCAED21ED4C6B00F52A99 /* Services */ = {
@@ -369,6 +383,7 @@
 				D56E2A7A21DEF6FD009826FB /* AppDelegate.swift in Sources */,
 				D58CCAE721ED270400F52A99 /* Prediction.swift in Sources */,
 				D54DCE6321E46E6F00F5E0F1 /* LAMetro.swift in Sources */,
+				D58325722209253800F27FC2 /* RealmStop.swift in Sources */,
 				D58CCAE521ED23DC00F52A99 /* Stop.swift in Sources */,
 				D58CCAEC21ED489500F52A99 /* PredictionTableViewController.swift in Sources */,
 				D59502C421FA8B7C0036C06B /* VehicleLocation.swift in Sources */,
@@ -382,6 +397,7 @@
 				D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */,
 				D58CCAEA21ED451800F52A99 /* PredictionData.swift in Sources */,
 				D58CCAF221ED55B100F52A99 /* MetroService.swift in Sources */,
+				D58325702209239000F27FC2 /* StopObject.swift in Sources */,
 				D529EB4E2203EBF600015675 /* TrainLine.swift in Sources */,
 				D54EFEDD2203E7D4004A9D9F /* UIButton+CustomButton.swift in Sources */,
 				D52BFF1321DEFBAF006A7058 /* StopTableViewController.swift in Sources */,

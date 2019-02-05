@@ -19,9 +19,13 @@ class StopTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    
+    
     let realm = try! Realm()
     
     stops = realm.objects(RealmStop.self)
+    
+    setTableEditable()
   }
   
   // MARK: - Table view data source
@@ -52,6 +56,30 @@ class StopTableViewController: UITableViewController {
     return cell
   }
   
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    
+    guard stops.count > 0 else { return }
+    
+    let realm = try! Realm()
+    
+    let stop = stops[indexPath.row]
+    
+    if editingStyle == .delete {
+      try! realm.write {
+        realm.delete(stop)
+      }
+      setTableEditable()
+      self.tableView.reloadData()
+      //      self.tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+  }
+  
+  override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    guard stops.count > 0 else { return false }
+    
+    return true
+  }
+  
   // MARK: - Navigation
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,6 +95,14 @@ class StopTableViewController: UITableViewController {
     } else if segue.identifier == "presentAddStop" {
       let nextVC = segue.destination as! AddStopViewController
       nextVC.delegate = self
+    }
+  }
+  
+  // MARK: - Methods
+  
+  private func setTableEditable() {
+    if stops.count < 1 {
+      tableView.allowsSelection = false
     }
   }
 }

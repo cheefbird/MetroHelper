@@ -12,9 +12,7 @@ import RealmSwift
 class StopTableViewController: UITableViewController {
   
   // MARK: - Properties
-  let allStopNames = LAMetro.allStopNames
   var allStops = LAMetro.allStops()
-  
   var stops: Results<RealmStop>!
   
   
@@ -77,8 +75,13 @@ class StopTableViewController: UITableViewController {
 
 extension StopTableViewController: StopModifierDelegate {
   
-  func addStop(_ stop: Stop) {
-    allStops.append(stop)
+  func addStop(_ stop: StopObject) {
+    let realm = try! Realm()
+    
+    let newRealmStop = RealmStop(fromStop: stop)
+    try! realm.write {
+      realm.add(newRealmStop)
+    }
     
     self.tableView.reloadData()
   }

@@ -9,5 +9,6 @@ target 'MetroHelper' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'iOSDropDown'
+  pod 'RealmSwift'
 
 end

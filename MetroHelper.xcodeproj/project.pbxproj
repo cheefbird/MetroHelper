@@ -69,6 +69,7 @@
 		D59502BD21FA7F6A0036C06B /* VehicleLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocationViewController.swift; sourceTree = "<group>"; };
 		D59502C321FA8B7C0036C06B /* VehicleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocation.swift; sourceTree = "<group>"; };
 		D5AB89E82203DDDC00CB14DB /* AddStopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStopViewController.swift; sourceTree = "<group>"; };
+		D5AC5EF4220A8E3400236EA7 /* MetroHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetroHelper.entitlements; sourceTree = "<group>"; };
 		EBB7826033A46C38DC1D02F5 /* Pods-MetroHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroHelper.debug.xcconfig"; path = "Target Support Files/Pods-MetroHelper/Pods-MetroHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		F09E871BD6125752F646DBFF /* Pods-MetroHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroHelper.release.xcconfig"; path = "Target Support Files/Pods-MetroHelper/Pods-MetroHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +213,7 @@
 		D56E2A7821DEF6FD009826FB /* MetroHelper */ = {
 			isa = PBXGroup;
 			children = (
+				D5AC5EF4220A8E3400236EA7 /* MetroHelper.entitlements */,
 				D5682F272208F4E80099021E /* Protocols */,
 				D58CCAED21ED4C6B00F52A99 /* Services */,
 				D54DCE5821E4624900F5E0F1 /* Helpers */,
@@ -281,6 +283,9 @@
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 						};
 					};
@@ -547,6 +552,7 @@
 			baseConfigurationReference = EBB7826033A46C38DC1D02F5 /* Pods-MetroHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MetroHelper/MetroHelper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WA3KPNE52J;
 				INFOPLIST_FILE = MetroHelper/Info.plist;
@@ -567,6 +573,7 @@
 			baseConfigurationReference = F09E871BD6125752F646DBFF /* Pods-MetroHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MetroHelper/MetroHelper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WA3KPNE52J;
 				INFOPLIST_FILE = MetroHelper/Info.plist;

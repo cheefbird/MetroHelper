@@ -100,9 +100,8 @@ class StopTableViewController: UITableViewController {
   
   // MARK: - Methods
   
+  /// Allows table rows to be deleted if stops array is populated.
   private func setTableEditable() {
-    print("SET TABLE EDITABLE DEBUG:")
-    print(stops.count)
     if stops.count < 1 {
       tableView.allowsSelection = false
     }
@@ -113,6 +112,9 @@ class StopTableViewController: UITableViewController {
 
 extension StopTableViewController: StopModifierDelegate {
   
+  /// Saves new stop to realmDB and adds it to stops array.
+  ///
+  /// - Parameter stop: Stop to save to realmDB and add to stops array.
   func addStop(_ stop: StopObject) {
     let realm = try! Realm()
     

@@ -65,7 +65,7 @@ class AddStopViewController: UIViewController {
       }
       
       if let stops = result.value {
-        self.availableStops = stops
+        self.availableStops = stops.sorted(by: {$0.displayName < $1.displayName })
       }
       
       self.loadingSpinner.stopAnimating()

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    
+    let oneSignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+    
+    OneSignal.initWithLaunchOptions(
+      launchOptions,
+      appId: "3b376a43-8cd3-4f15-8efe-f6793da84282",
+      handleNotificationAction: nil,
+      settings: oneSignalInitSettings)
+    
+    OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification
+    
+    OneSignal.promptForPushNotifications { accepted in
+      print("User accepted notifications: \(accepted)")
+      
+      // Prompt for location AFTER push notifications
+      OneSignal.promptLocation()
+    }
+    
+    
+    
     return true
   }
 

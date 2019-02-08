@@ -1,6 +1,7 @@
 PODS:
-  - Alamofire (4.8.0)
+  - Alamofire (4.8.1)
   - iOSDropDown (0.2.7)
+  - OneSignal (2.9.5)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
   - Realm/Headers (3.13.1)
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - iOSDropDown
+  - OneSignal (< 3.0, >= 2.6.2)
   - RealmSwift
   - SwiftyJSON
 
@@ -18,17 +20,19 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - iOSDropDown
+    - OneSignal
     - Realm
     - RealmSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   iOSDropDown: 7a4cfc67d5166f319858747b63cd2f7760c4fb4b
+  OneSignal: ccdeb961882f8668305e5b694e2cb7cb325fc907
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 3e9a3f3d22cff73b7b71b109845ffaaaf9075e30
+PODFILE CHECKSUM: bf98d571bc0ae8ea988e06496582fa11059f03c0
 
 COCOAPODS: 1.6.0.beta.1

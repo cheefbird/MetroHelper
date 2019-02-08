@@ -29,7 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     OneSignal.promptForPushNotifications { accepted in
       print("User accepted notifications: \(accepted)")
+      
+      // Prompt for location AFTER push notifications
+      OneSignal.promptLocation()
     }
+    
+    
     
     return true
   }

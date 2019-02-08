@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zux-Wp-z78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1915.9420289855075" y="-718.20652173913049"/>
+            <point key="canvasLocation" x="1688" y="-840"/>
         </scene>
         <!--Prediction Table View Controller-->
         <scene sceneID="hh3-ll-0DY">
@@ -311,7 +311,9 @@
                             <outlet property="delegate" destination="GvM-bM-Efw" id="QBW-cN-Sq1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="HUm-8u-DBU"/>
+                    <navigationItem key="navigationItem" id="HUm-8u-DBU">
+                        <barButtonItem key="rightBarButtonItem" image="icon_settings" largeContentSizeImage="icon_settings" id="QZo-TH-Goo"/>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="f20-he-Grq">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -386,5 +388,6 @@
     <resources>
         <image name="icon_close_large" width="40" height="40"/>
         <image name="icon_home" width="19" height="19"/>
+        <image name="icon_settings" width="24" height="24"/>
     </resources>
 </document>

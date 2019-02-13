@@ -19,8 +19,6 @@ class StopTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    
-    
     let realm = try! Realm()
     
     stops = realm.objects(RealmStop.self)
@@ -42,12 +40,25 @@ class StopTableViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "StopCell", for: indexPath)
+    tableView.backgroundColor = .white
+    tableView.separatorStyle = .singleLine
+    let darkGrayColor = UIColor(red: 0.28, green: 0.28, blue: 0.31, alpha: 1.0)
     
     guard stops.count > 0 else {
-      cell.textLabel?.text = "Add Stops to Continue!"
+      let cell = tableView.dequeueReusableCell(withIdentifier: "HelperCell", for: indexPath)
+      
+      tableView.rowHeight = tableView.bounds.height
+      
+      tableView.separatorStyle = .none
+      
+      tableView.backgroundColor = darkGrayColor
+      
       return cell
     }
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "StopCell", for: indexPath)
+    
+    tableView.rowHeight = 44
     
     let stop = stops[indexPath.row]
     

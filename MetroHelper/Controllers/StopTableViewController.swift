@@ -46,6 +46,7 @@ class StopTableViewController: UITableViewController {
     
     guard stops.count > 0 else {
       cell.textLabel?.text = "Add Stops to Continue!"
+      cell.accessoryType = .none
       return cell
     }
     

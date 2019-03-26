@@ -82,7 +82,7 @@
 		D566058A2207035E0071CD91 /* UIView+Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
 		D5682F282208F5450099021E /* StopModifierDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopModifierDelegate.swift; sourceTree = "<group>"; };
 		D5682F2A22090BDB0099021E /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
-		D56E2A7621DEF6FD009826FB /* MetroHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56E2A7621DEF6FD009826FB /* Metrodamus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metrodamus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E2A7921DEF6FD009826FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D56E2A7E21DEF6FD009826FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D56E2A8021DEF6FF009826FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		D59502BD21FA7F6A0036C06B /* VehicleLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocationViewController.swift; sourceTree = "<group>"; };
 		D59502C321FA8B7C0036C06B /* VehicleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocation.swift; sourceTree = "<group>"; };
 		D5AB89E82203DDDC00CB14DB /* AddStopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStopViewController.swift; sourceTree = "<group>"; };
-		D5AC5EF4220A8E3400236EA7 /* MetroHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetroHelper.entitlements; sourceTree = "<group>"; };
+		D5AC5EF4220A8E3400236EA7 /* Metrodamus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Metrodamus.entitlements; sourceTree = "<group>"; };
 		D5D9EC94220D1FF6009058BF /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D9EC96220D1FF6009058BF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		D5D9EC98220D1FF6009058BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		D56E2A6D21DEF6FD009826FB = {
 			isa = PBXGroup;
 			children = (
-				D56E2A7821DEF6FD009826FB /* MetroHelper */,
+				D56E2A7821DEF6FD009826FB /* Metrodamus */,
 				D5D9EC95220D1FF6009058BF /* OneSignalNotificationServiceExtension */,
 				D56E2A7721DEF6FD009826FB /* Products */,
 				759C7143002902D465A221B0 /* Pods */,
@@ -250,16 +250,16 @@
 		D56E2A7721DEF6FD009826FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D56E2A7621DEF6FD009826FB /* MetroHelper.app */,
+				D56E2A7621DEF6FD009826FB /* Metrodamus.app */,
 				D5D9EC94220D1FF6009058BF /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D56E2A7821DEF6FD009826FB /* MetroHelper */ = {
+		D56E2A7821DEF6FD009826FB /* Metrodamus */ = {
 			isa = PBXGroup;
 			children = (
-				D5AC5EF4220A8E3400236EA7 /* MetroHelper.entitlements */,
+				D5AC5EF4220A8E3400236EA7 /* Metrodamus.entitlements */,
 				D56E2A7921DEF6FD009826FB /* AppDelegate.swift */,
 				D5682F272208F4E80099021E /* Protocols */,
 				D58CCAED21ED4C6B00F52A99 /* Services */,
@@ -270,7 +270,7 @@
 				D56E2A8021DEF6FF009826FB /* Assets.xcassets */,
 				D56E2A8521DEF6FF009826FB /* Info.plist */,
 			);
-			path = MetroHelper;
+			path = Metrodamus;
 			sourceTree = "<group>";
 		};
 		D583256E2209235F00F27FC2 /* Stops */ = {
@@ -304,9 +304,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D56E2A7521DEF6FD009826FB /* MetroHelper */ = {
+		D56E2A7521DEF6FD009826FB /* Metrodamus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D56E2A8821DEF6FF009826FB /* Build configuration list for PBXNativeTarget "MetroHelper" */;
+			buildConfigurationList = D56E2A8821DEF6FF009826FB /* Build configuration list for PBXNativeTarget "Metrodamus" */;
 			buildPhases = (
 				677FB6705810CA69578F8710 /* [CP] Check Pods Manifest.lock */,
 				D56E2A7221DEF6FD009826FB /* Sources */,
@@ -320,9 +320,9 @@
 			dependencies = (
 				D5D9EC9A220D1FF6009058BF /* PBXTargetDependency */,
 			);
-			name = MetroHelper;
+			name = Metrodamus;
 			productName = MetroHelper;
-			productReference = D56E2A7621DEF6FD009826FB /* MetroHelper.app */;
+			productReference = D56E2A7621DEF6FD009826FB /* Metrodamus.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D5D9EC93220D1FF6009058BF /* OneSignalNotificationServiceExtension */ = {
@@ -372,7 +372,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D56E2A7121DEF6FD009826FB /* Build configuration list for PBXProject "MetroHelper" */;
+			buildConfigurationList = D56E2A7121DEF6FD009826FB /* Build configuration list for PBXProject "Metrodamus" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -385,7 +385,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D56E2A7521DEF6FD009826FB /* MetroHelper */,
+				D56E2A7521DEF6FD009826FB /* Metrodamus */,
 				D5D9EC93220D1FF6009058BF /* OneSignalNotificationServiceExtension */,
 			);
 		};
@@ -680,16 +680,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MetroHelper/MetroHelper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Metrodamus/Metrodamus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WA3KPNE52J;
-				INFOPLIST_FILE = MetroHelper/Info.plist;
+				INFOPLIST_FILE = Metrodamus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.MetroHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.Metrodamus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -702,16 +702,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MetroHelper/MetroHelper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Metrodamus/Metrodamus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WA3KPNE52J;
-				INFOPLIST_FILE = MetroHelper/Info.plist;
+				INFOPLIST_FILE = Metrodamus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.MetroHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.Metrodamus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -731,7 +731,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.MetroHelper.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.Metrodamus.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -752,7 +752,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.MetroHelper.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.Metrodamus.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -763,7 +763,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D56E2A7121DEF6FD009826FB /* Build configuration list for PBXProject "MetroHelper" */ = {
+		D56E2A7121DEF6FD009826FB /* Build configuration list for PBXProject "Metrodamus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D56E2A8621DEF6FF009826FB /* Debug */,
@@ -772,7 +772,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D56E2A8821DEF6FF009826FB /* Build configuration list for PBXNativeTarget "MetroHelper" */ = {
+		D56E2A8821DEF6FF009826FB /* Build configuration list for PBXNativeTarget "Metrodamus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D56E2A8921DEF6FF009826FB /* Debug */,

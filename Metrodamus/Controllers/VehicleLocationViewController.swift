@@ -13,6 +13,9 @@ class VehicleLocationViewController: UIViewController {
   
   // MARK: - Outlets
   @IBOutlet weak var mapView: MKMapView!
+  @IBOutlet weak var refreshButton: UIBarButtonItem!
+  @IBOutlet weak var overlayView: UIView!
+  @IBOutlet weak var refreshSpinner: UIActivityIndicatorView!
   
   // MARK: - Properties
   let initialLocation = CLLocationCoordinate2D(latitude: 34.0263909, longitude: -118.372572)
@@ -30,7 +33,11 @@ class VehicleLocationViewController: UIViewController {
     
     centerMap(onLocation: initialLocation)
     
-    fetchVehicleLocation()
+    fetchVehicleLocation { success in
+      if success {
+        self.toggleRefreshOverlay()
+      }
+    }
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -40,7 +47,8 @@ class VehicleLocationViewController: UIViewController {
   
   // MARK: - Data Methods
   
-  private func fetchVehicleLocation() {
+  private func fetchVehicleLocation(_ completion: @escaping (Bool) -> Void) {
+    
     MetroService.sharedInstance.getTrainLocation(forTrainId: trainId) { result in
       guard result.error == nil else {
         // TODO: Show error in alert modal
@@ -53,6 +61,10 @@ class VehicleLocationViewController: UIViewController {
         
         self.mapView.addAnnotation(newLocation)
         self.centerMap(onLocation: newLocation.coordinate)
+        
+        completion(true)
+      } else {
+        completion(false)
       }
     }
   }
@@ -70,6 +82,29 @@ class VehicleLocationViewController: UIViewController {
     } else {
       locationManager.requestWhenInUseAuthorization()
     }
+  }
+  
+  @IBAction func refreshView() {
+    self.mapView.removeAnnotations(self.mapView.annotations)
+    
+    toggleRefreshOverlay()
+    
+    fetchVehicleLocation { success in
+      if success {
+        self.toggleRefreshOverlay()
+      }
+    }
+  }
+  
+  private func toggleRefreshOverlay() {
+    overlayView.isHidden = !overlayView.isHidden
+    
+    if refreshSpinner.isAnimating {
+      refreshSpinner.stopAnimating()
+    } else {
+      refreshSpinner.startAnimating()
+    }
+    
   }
   
 }

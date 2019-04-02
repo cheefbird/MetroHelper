@@ -14,6 +14,7 @@ struct Vehicle {
   
   // MARK: - Properties
   
+  let id: Int
   var latitude: Float
   var longitude: Float
   let routeId: Int
@@ -22,7 +23,8 @@ struct Vehicle {
   
   // MARK: Initializers
   
-  init(latitude: Float, longitude: Float, routeId: Int, secondsSinceReport: Int, runId: String) {
+  init(id: Int, latitude: Float, longitude: Float, routeId: Int, secondsSinceReport: Int, runId: String) {
+    self.id = id
     self.latitude = latitude
     self.longitude = longitude
     self.routeId = routeId
@@ -34,7 +36,7 @@ struct Vehicle {
     if json["id"].intValue != trainId {
       return nil
     }
-    
+    id = trainId
     latitude = json["latitude"].floatValue
     longitude = json["longitude"].floatValue
     routeId = json["route_id"].intValue

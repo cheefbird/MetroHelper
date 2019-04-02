@@ -104,7 +104,7 @@ class MetroService {
     let json = JSON(rawJson)
     
     if let vehicle = Vehicle(withJson: json, forTrainID: trainId) {
-      let title = "Vehicle \(vehicle.routeId) Location"
+      let title = "Vehicle \(vehicle.id) on route \(vehicle.routeId)"
       let vehicleLocation = VehicleLocation(vehicle: vehicle, title: title)
       return .success(vehicleLocation)
     } else {

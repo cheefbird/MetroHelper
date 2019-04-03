@@ -102,18 +102,34 @@ class PredictionTableViewController: UITableViewController {
       
       if let fetchedPredictions = result.value {
         for prediction in fetchedPredictions {
-          if prediction.direction == "Home" {
-            self.homePredictions.append(prediction)
-          } else if prediction.direction == "Work" {
-            self.workPredictions.append(prediction)
-          } else {
-            continue
+          
+          var predictionCopy = prediction
+          
+          MetroService.sharedInstance.getTrainLocation(forTrainId: prediction.trainId) { result in
+            guard result.error == nil else {
+              // TODO: Show error in alert modal
+              debugPrint(result.error.debugDescription)
+              return
+            }
+            
+            if let location = result.value {
+              predictionCopy.age = location.vehicle.secondsSinceReport
+              
+              if predictionCopy.direction == "Home" {
+                self.homePredictions.append(predictionCopy)
+              } else if predictionCopy.direction == "Work" {
+                self.workPredictions.append(predictionCopy)
+              }
+            }
+            self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
           }
+//          self.tableView.reloadData()
+//          self.refreshControl?.endRefreshing()
         }
       }
       
-      self.tableView.reloadData()
-      self.refreshControl?.endRefreshing()
+      
     }
   }
   

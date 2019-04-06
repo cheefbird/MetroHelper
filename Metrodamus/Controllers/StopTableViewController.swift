@@ -54,13 +54,13 @@ class StopTableViewController: UITableViewController {
       return cell
     }
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "StopCell", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "StopCell", for: indexPath) as! StopTableViewCell
     
     tableView.rowHeight = 44
     
     let stop = stops[indexPath.row]
     
-    cell.textLabel?.text = stop.displayName
+    cell.configure(forStop: stop)
     
     return cell
   }

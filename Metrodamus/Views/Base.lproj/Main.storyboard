@@ -20,15 +20,15 @@
                         <color key="separatorColor" red="0.2784313725" green="0.28235294119999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StopCell" textLabel="m2V-sg-cXk" style="IBUITableViewCellStyleDefault" id="6vN-W2-Cga">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StopCell" textLabel="m2V-sg-cXk" style="IBUITableViewCellStyleDefault" id="6vN-W2-Cga" customClass="StopTableViewCell" customModule="Metrodamus" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6vN-W2-Cga" id="3IG-e0-PBQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.14999999999999999" adjustsFontForContentSizeCategory="YES" id="m2V-sg-cXk">
-                                            <rect key="frame" x="20" y="0.0" width="356" height="43.666666666666664"/>
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                             <color key="textColor" red="0.2784313725" green="0.28235294119999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -37,7 +37,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.2784313725" green="0.28235294119999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
+                                    <outlet property="stopLabel" destination="m2V-sg-cXk" id="3QX-c0-mgH"/>
                                     <segue destination="GvM-bM-Efw" kind="show" identifier="showPredictions" id="TtQ-SZ-7uA"/>
                                 </connections>
                             </tableViewCell>

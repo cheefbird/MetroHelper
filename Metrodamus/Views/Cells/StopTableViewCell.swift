@@ -11,7 +11,10 @@ import UIKit
 class StopTableViewCell: UITableViewCell {
   
   // MARK: - Outlets
-  @IBOutlet weak var mainView: UIView!
+  
+  @IBOutlet weak var stopLabel: UILabel!
+  
+  // MARK: - Overrides
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -24,4 +27,14 @@ class StopTableViewCell: UITableViewCell {
     // Configure the view for the selected state
   }
   
+  // MARK: - Configure
+  
+  func configure(forStop stop: StopObject) {
+    let customAccessoryView = UIImageView(frame: CGRect(x: 0, y: 0, width: 14, height: 16))
+    customAccessoryView.image = UIImage(named: "icon_detail")!
+    
+    self.accessoryView = customAccessoryView
+    
+    self.stopLabel.text = stop.displayName
+  }
 }

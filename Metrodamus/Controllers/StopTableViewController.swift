@@ -40,16 +40,12 @@ class StopTableViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let darkGrayColor = UIColor(red: 0.28, green: 0.28, blue: 0.31, alpha: 1.0)
-    
     guard stops.count > 0 else {
       let cell = tableView.dequeueReusableCell(withIdentifier: "HelperCell", for: indexPath)
       
       tableView.rowHeight = tableView.bounds.height
       
       tableView.separatorStyle = .none
-      
-//      tableView.backgroundColor = darkGrayColor
       
       return cell
     }

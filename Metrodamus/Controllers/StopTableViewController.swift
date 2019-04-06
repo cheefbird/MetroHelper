@@ -40,8 +40,6 @@ class StopTableViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    tableView.backgroundColor = .white
-    tableView.separatorStyle = .singleLine
     let darkGrayColor = UIColor(red: 0.28, green: 0.28, blue: 0.31, alpha: 1.0)
     
     guard stops.count > 0 else {

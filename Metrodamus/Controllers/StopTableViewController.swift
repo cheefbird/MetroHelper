@@ -49,7 +49,7 @@ class StopTableViewController: UITableViewController {
       
       tableView.separatorStyle = .none
       
-      tableView.backgroundColor = darkGrayColor
+//      tableView.backgroundColor = darkGrayColor
       
       return cell
     }
@@ -57,6 +57,7 @@ class StopTableViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "StopCell", for: indexPath) as! StopTableViewCell
     
     tableView.rowHeight = 44
+    tableView.separatorStyle = .singleLine
     
     let stop = stops[indexPath.row]
     

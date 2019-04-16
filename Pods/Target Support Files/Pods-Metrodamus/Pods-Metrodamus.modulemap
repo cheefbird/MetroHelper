@@ -1,0 +1,6 @@
+framework module Pods_Metrodamus {
+  umbrella header "Pods-Metrodamus-umbrella.h"
+
+  export *
+  module * { export * }
+}

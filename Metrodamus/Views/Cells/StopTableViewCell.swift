@@ -32,6 +32,7 @@ class StopTableViewCell: UITableViewCell {
   func configure(forStop stop: StopObject) {
     let customAccessoryView = UIImageView(frame: CGRect(x: 0, y: 0, width: 14, height: 16))
     customAccessoryView.image = UIImage(named: "icon_detail")!
+    customAccessoryView.tintColor = UIColor(named: "darkGray")
     
     self.accessoryView = customAccessoryView
     

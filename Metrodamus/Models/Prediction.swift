@@ -16,6 +16,7 @@ struct Prediction {
   let runId: String
   let trainId: Int
   let direction: String
+  var age: Int
   
   init(seconds: Int, minutes: Int, routeId: Int, runId: String, trainId: Int) {
     self.seconds = seconds
@@ -24,6 +25,7 @@ struct Prediction {
     self.runId = runId
     self.trainId = trainId
     self.direction = LAMetro.getDirection(forRunID: runId)
+    self.age = 0
   }
   
   init?(json: JSON) {
@@ -38,5 +40,6 @@ struct Prediction {
     self.runId = json["run_id"].stringValue
     self.trainId = json["block_id"].intValue
     self.direction = LAMetro.getDirection(forRunID: self.runId)
+    self.age = 0
   }
 }

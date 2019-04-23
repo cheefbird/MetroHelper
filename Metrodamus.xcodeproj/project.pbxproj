@@ -38,6 +38,7 @@
 		D5C4CAA42252DE6B00AF82E1 /* VehicleLocationInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CAA32252DE6B00AF82E1 /* VehicleLocationInfoTableViewController.swift */; };
 		D5D9EC97220D1FF6009058BF /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D9EC96220D1FF6009058BF /* NotificationService.swift */; };
 		D5D9EC9B220D1FF6009058BF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D5D9EC94220D1FF6009058BF /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D5F210DA22585AA400BC02EF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F210D922585AA400BC02EF /* Colors.xcassets */; };
 		E28E743359953D98614F3E8B /* Pods_Metrodamus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11329A3CC4EC9027BD5B64ED /* Pods_Metrodamus.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		D5D9EC94220D1FF6009058BF /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D9EC96220D1FF6009058BF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		D5D9EC98220D1FF6009058BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5F210D922585AA400BC02EF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 		D56E2A7821DEF6FD009826FB /* Metrodamus */ = {
 			isa = PBXGroup;
 			children = (
+				D5F210D822585A4B00BC02EF /* Assets */,
 				D5AC5EF4220A8E3400236EA7 /* Metrodamus.entitlements */,
 				D56E2A7921DEF6FD009826FB /* AppDelegate.swift */,
 				D5682F272208F4E80099021E /* Protocols */,
@@ -270,7 +273,6 @@
 				D52BFF1121DEFAE7006A7058 /* Models */,
 				D52BFF1021DEFACB006A7058 /* Controllers */,
 				D52BFF0F21DEFAA5006A7058 /* Views */,
-				D56E2A8021DEF6FF009826FB /* Assets.xcassets */,
 				D56E2A8521DEF6FF009826FB /* Info.plist */,
 			);
 			path = Metrodamus;
@@ -302,6 +304,15 @@
 				D5D9EC98220D1FF6009058BF /* Info.plist */,
 			);
 			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		D5F210D822585A4B00BC02EF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D56E2A8021DEF6FF009826FB /* Assets.xcassets */,
+				D5F210D922585AA400BC02EF /* Colors.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F210DA22585AA400BC02EF /* Colors.xcassets in Resources */,
 				D56E2A8421DEF6FF009826FB /* LaunchScreen.storyboard in Resources */,
 				D56E2A8121DEF6FF009826FB /* Assets.xcassets in Resources */,
 				D5682F2B22090BDB0099021E /* README.MD in Resources */,

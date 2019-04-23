@@ -35,11 +35,12 @@ class PredictionTableViewCell: UITableViewCell {
     
     let image = getDirectionImage(fromDirection: prediction.direction)
     
-    let eta = createEtaLabelText(withTime: prediction.minutes)
+    let eta = buildEtaLabelText(withTime: prediction.minutes)
     
     directionLabel.text = prediction.direction
     directionImage.image = image
     etaLabel.text = eta
+    etaLabel.textColor = getEtaLabelTextColor(forDelay: prediction.age)
   }
   
   private func getDirectionImage(fromDirection direction: String) -> UIImage {
@@ -60,7 +61,18 @@ class PredictionTableViewCell: UITableViewCell {
     return image
   }
   
-  private func createEtaLabelText(withTime time: Int) -> String {
+  private func buildEtaLabelText(withTime time: Int) -> String {
     return "\(time)min"
+  }
+  
+  private func getEtaLabelTextColor(forDelay delay: Int) -> UIColor {
+    switch delay {
+    case 0...45:
+      return UIColor.green
+    case 46...80:
+      return UIColor(hue: 47, saturation: 97, brightness: 91, alpha: 1.0)
+    default:
+      return UIColor.red
+    }
   }
 }

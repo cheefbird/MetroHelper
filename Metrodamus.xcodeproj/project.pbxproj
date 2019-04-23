@@ -35,6 +35,7 @@
 		D59502BE21FA7F6A0036C06B /* VehicleLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59502BD21FA7F6A0036C06B /* VehicleLocationViewController.swift */; };
 		D59502C421FA8B7C0036C06B /* VehicleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59502C321FA8B7C0036C06B /* VehicleLocation.swift */; };
 		D5AB89E92203DDDC00CB14DB /* AddStopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AB89E82203DDDC00CB14DB /* AddStopViewController.swift */; };
+		D5C4CAA42252DE6B00AF82E1 /* VehicleLocationInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CAA32252DE6B00AF82E1 /* VehicleLocationInfoTableViewController.swift */; };
 		D5D9EC97220D1FF6009058BF /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D9EC96220D1FF6009058BF /* NotificationService.swift */; };
 		D5D9EC9B220D1FF6009058BF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D5D9EC94220D1FF6009058BF /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D5F210DA22585AA400BC02EF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F210D922585AA400BC02EF /* Colors.xcassets */; };
@@ -103,6 +104,7 @@
 		D59502C321FA8B7C0036C06B /* VehicleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocation.swift; sourceTree = "<group>"; };
 		D5AB89E82203DDDC00CB14DB /* AddStopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStopViewController.swift; sourceTree = "<group>"; };
 		D5AC5EF4220A8E3400236EA7 /* Metrodamus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Metrodamus.entitlements; sourceTree = "<group>"; };
+		D5C4CAA32252DE6B00AF82E1 /* VehicleLocationInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocationInfoTableViewController.swift; sourceTree = "<group>"; };
 		D5D9EC94220D1FF6009058BF /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D9EC96220D1FF6009058BF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		D5D9EC98220D1FF6009058BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				D58CCAEB21ED489500F52A99 /* PredictionTableViewController.swift */,
 				D59502BD21FA7F6A0036C06B /* VehicleLocationViewController.swift */,
 				D5AB89E82203DDDC00CB14DB /* AddStopViewController.swift */,
+				D5C4CAA32252DE6B00AF82E1 /* VehicleLocationInfoTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				D54DCE6021E4674600F5E0F1 /* UserData.swift in Sources */,
 				D58CCAEA21ED451800F52A99 /* PredictionData.swift in Sources */,
 				D58CCAF221ED55B100F52A99 /* MetroService.swift in Sources */,
+				D5C4CAA42252DE6B00AF82E1 /* VehicleLocationInfoTableViewController.swift in Sources */,
 				D58325702209239000F27FC2 /* StopObject.swift in Sources */,
 				D529EB4E2203EBF600015675 /* TrainLine.swift in Sources */,
 				D54EFEDD2203E7D4004A9D9F /* UIButton+CustomButton.swift in Sources */,

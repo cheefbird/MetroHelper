@@ -12,12 +12,14 @@ import MapKit
 class VehicleLocation: NSObject, MKAnnotation {
   var coordinate: CLLocationCoordinate2D
   let title: String?
+  let subtitle: String?
   let vehicle: Vehicle
   
-  init(vehicle: Vehicle, title: String) {
+  init(vehicle: Vehicle, title: String, subtitle: String) {
     self.coordinate = vehicle.getCoordinate()
     self.title = title
     self.vehicle = vehicle
+    self.subtitle = subtitle
     
     super.init()
   }

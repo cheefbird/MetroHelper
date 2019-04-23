@@ -45,6 +45,13 @@ class VehicleLocationViewController: UIViewController {
     checkLocationPermissionStatus()
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showVehicleDetails" {
+      let infoVC = segue.destination as! VehicleLocationInfoTableViewController
+      infoVC.vehicleLocation = vehicleLocation
+    }
+  }
+  
   // MARK: - Data Methods
   
   private func fetchVehicleLocation(_ completion: @escaping (Bool) -> Void) {
@@ -126,8 +133,16 @@ extension VehicleLocationViewController: MKMapViewDelegate {
       view.canShowCallout = true
       view.calloutOffset = CGPoint(x: -5, y: 5)
       view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+      view.animatesWhenAdded = true
+      
+      
     }
     
     return view
+  }
+  
+  func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    
+    performSegue(withIdentifier: "showVehicleDetails", sender: nil)
   }
 }

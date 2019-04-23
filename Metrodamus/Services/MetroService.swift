@@ -105,7 +105,8 @@ class MetroService {
     
     if let vehicle = Vehicle(withJson: json, forTrainID: trainId) {
       let title = "Vehicle \(vehicle.id) on route \(vehicle.routeId)"
-      let vehicleLocation = VehicleLocation(vehicle: vehicle, title: title)
+      let subtitle = "Location age: \(vehicle.secondsSinceReport)"
+      let vehicleLocation = VehicleLocation(vehicle: vehicle, title: title, subtitle: subtitle)
       return .success(vehicleLocation)
     } else {
       return .failure(PredictionRouterError.serializationError(reason: "Could not turn JSON into a Vehicle"))
